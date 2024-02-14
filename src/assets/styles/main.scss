@@ -8,8 +8,11 @@ $main--color300: #fca311;
 $main--color400: #e5e5e5;
 $main--color500: #ffffff;
 
+html,
+body {
+	scroll-behavior: smooth;
+}
 body {
 	background-color: $main--color100;
-	scroll-behavior: smooth;
 	overflow-x: hidden;
 }

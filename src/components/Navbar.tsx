@@ -3,9 +3,13 @@ import { libreBaskerville } from '@/lib/fonts';
 import { useAppSelector } from '@/lib/redux/store';
 import Link from 'next/link';
 
+/* referrence for menu  */
+/* https://www.youtube.com/watch?v=yoMf7BOujLA*/
+/* https://djudesign.com/ */
+
 export default function Navbar() {
 	const { navLinks } = useAppSelector((state) => state.dataTemplate);
-	// https://reacthustle.com/blog/nextjs-scroll-to-element#google_vignette
+
 	return (
 		<header className='mb-10 flex lg:flex-row justify-between items-center text-white'>
 			<h1 className={`${libreBaskerville.className} text-[2.5rem] font-bold`}>

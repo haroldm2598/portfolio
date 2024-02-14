@@ -27,6 +27,7 @@ const containerVars = {
 		}
 	}
 };
+
 const mobileLinkVars = {
 	initial: {
 		y: '100vh',
@@ -67,7 +68,15 @@ export default function AnimateSection({
 					animate='open'
 					exit='initial'
 				>
-					<div className='overflow-hidden'>{children}</div>
+					<div className='overflow-hidden'>
+						<motion.div
+							variants={mobileLinkVars}
+							initial='initial'
+							animate={inViewControl}
+						>
+							{children}
+						</motion.div>
+					</div>
 				</motion.div>
 			</AnimatePresence>
 		</div>

@@ -1,17 +1,33 @@
 'use client';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { libreBaskerville } from '@/lib/fonts';
 import { useAppSelector } from '@/lib/redux/store';
-import Link from 'next/link';
+import ButtonMenu from './ButtonMenu';
 
 /* referrence for menu  */
 /* https://www.youtube.com/watch?v=yoMf7BOujLA*/
 /* https://djudesign.com/ */
 
+const headerAnimateVariants = {
+	initial: { opacity: 0, y: -100 },
+	animate: {
+		opacity: 1,
+		y: 0,
+		transition: { ease: 'easeInOut', duration: 0.5, delay: 0.2 }
+	}
+};
+
 export default function Navbar() {
 	const { navLinks } = useAppSelector((state) => state.dataTemplate);
 
 	return (
-		<header className='mb-10 flex lg:flex-row justify-between items-center text-white'>
+		<motion.header
+			className='mb-10 w-full fixed top-0 left-0 z flex lg:flex-row justify-between items-center text-white'
+			variants={headerAnimateVariants}
+			initial='initial'
+			animate='animate'
+		>
 			<h1 className={`${libreBaskerville.className} text-[2.5rem] font-bold`}>
 				RoldDev
 			</h1>
@@ -28,6 +44,8 @@ export default function Navbar() {
 					);
 				})}
 			</ul>
-		</header>
+
+			<ButtonMenu />
+		</motion.header>
 	);
 }

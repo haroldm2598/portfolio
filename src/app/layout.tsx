@@ -1,7 +1,7 @@
 import '@/assets/styles/main.scss';
 import type { Metadata } from 'next';
 import { montserrat } from '@/lib/fonts';
-import Navbar from '@/components/Navbar';
+import Navbar from '@/components/Header/Navbar';
 import { ReduxProvider } from './StoreProvider';
 
 export const metadata: Metadata = {

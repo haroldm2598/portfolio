@@ -1,8 +1,13 @@
 'use client';
 import { useState } from 'react';
+import { useAppSelector } from '@/lib/redux/store';
+import { AnimatePresence, motion } from 'framer-motion';
+import Link from 'next/link';
+
 import styles from './ButtonMenu.module.scss';
 
 export default function ButtonMenu() {
+	const { navLinks } = useAppSelector((state) => state.dataTemplate);
 	const [isActive, setIsActive] = useState(false);
 
 	return (
@@ -17,12 +22,36 @@ export default function ButtonMenu() {
 					className={`${styles.burger} ${isActive ? styles.burgerActive : ''}`}
 				></div>
 			</div>
-
-			{isActive && (
-				<div className='w-full h-full bg-white absolute top-[12%] right-0 z-10'>
-					testing
-				</div>
-			)}
+			<AnimatePresence>
+				{isActive && (
+					<motion.div
+						className='absolute z-50 top-[12%] right-0 h-full w-full md:w-[30rem] bg-darkBlue'
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						exit={{ opacity: 0 }}
+						transition={{ delay: 0.3, type: 'tween', stiffness: 120 }}
+					>
+						<ul className='px-4 py-6 flex flex-col gap-10 text-white'>
+							{navLinks?.map((item, index) => (
+								<motion.li
+									key={index}
+									className={`text-2xl font-bold uppercase`}
+									initial={{ opacity: 0 }}
+									animate={{ opacity: 1 }}
+									transition={{ delay: 0.4, type: 'tween', stiffness: 90 }}
+								>
+									<Link
+										href={`#${item.path}`}
+										onClick={() => setIsActive(!isActive)}
+									>
+										{item.name}
+									</Link>
+								</motion.li>
+							))}
+						</ul>
+					</motion.div>
+				)}
+			</AnimatePresence>
 		</>
 	);
 }

@@ -7,11 +7,6 @@ import {
 	useInView
 } from 'framer-motion';
 
-const ImageAnimationVariants = {
-	hidden: { opacity: 0, y: '100vh' },
-	visible: { opacity: 1, y: 0 }
-};
-
 const containerVars = {
 	initial: {
 		transition: {
@@ -55,7 +50,6 @@ export default function AnimateSection({
 	const inViewControl = useAnimation();
 
 	useEffect(() => {
-		if (isInView) inViewControl.start('visible');
 		if (isInView) inViewControl.start('open');
 	}, [isInView]);
 

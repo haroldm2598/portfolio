@@ -2,6 +2,7 @@ import '@/assets/styles/main.scss';
 import type { Metadata } from 'next';
 import { montserrat } from '@/lib/fonts';
 import Navbar from '@/components/Header/Navbar';
+import Footer from '@/components/Header/Footer';
 import { ReduxProvider } from './StoreProvider';
 
 export const metadata: Metadata = {
@@ -20,6 +21,7 @@ export default function RootLayout({
 				<ReduxProvider>
 					<Navbar />
 					{children}
+					<Footer />
 				</ReduxProvider>
 			</body>
 		</html>

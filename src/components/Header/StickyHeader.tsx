@@ -20,13 +20,8 @@ export default function StickyHeader({
 	const isSticky = () => {
 		const scrollTop = window.scrollY;
 		const stickyClass = scrollTop >= 50 ? 'is-sticky' : '';
-
-		// if scrolltop become subtract or have less than scroll become hidden else show
-		// const hideClass = scrollTop <= stickyClass ? '' : 'is-sticky' ;
 		setSticky(stickyClass);
 	};
 
-	return (
-		<div className={`rewards w-full p-4 lg:px-8 ${sticky}`}>{children}</div>
-	);
+	return <div className={`w-full p-4 lg:px-8 ${sticky}`}>{children}</div>;
 }

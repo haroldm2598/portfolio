@@ -6,6 +6,8 @@ import { useAppSelector } from '@/lib/redux/store';
 import ButtonMenu from './ButtonMenu';
 import StickyHeader from './StickyHeader';
 
+import Headroom from 'react-headroom';
+
 /* referrence for menu  */
 /* https://www.youtube.com/watch?v=yoMf7BOujLA*/
 /* https://djudesign.com/ */
@@ -25,7 +27,16 @@ export default function Navbar() {
 	// for header class
 	// mb-10 px-10 py-5 w-full fixed top-0 left-0 z-10
 	return (
-		<StickyHeader>
+		<Headroom
+			style={{
+				webkitTransition: 'all .5s ease-in-out',
+				mozTransition: 'all .5s ease-in-out',
+				oTransition: 'all .5s ease-in-out',
+				transition: 'all .5s ease-in-out'
+			}}
+		>
+			{/* <StickyHeader> */}
+			{/* dine ka mag lagay ng style pero dapat may exception */}
 			<motion.header
 				className='flex lg:flex-row justify-between items-center text-white'
 				variants={headerAnimateVariants}
@@ -51,6 +62,7 @@ export default function Navbar() {
 
 				<ButtonMenu />
 			</motion.header>
-		</StickyHeader>
+			{/* </StickyHeader> */}
+		</Headroom>
 	);
 }

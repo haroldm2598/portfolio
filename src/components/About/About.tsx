@@ -1,7 +1,7 @@
 'use client';
-import { libreBaskerville } from '@/lib/fonts';
 import { useAppSelector } from '@/lib/redux/store';
-import AnimateSection from './AnimateSection';
+import AnimateSection from '../Animated/AnimateSection';
+import TitleSection from '../TitleSection';
 
 export default function About() {
 	const { expertiseList } = useAppSelector((state) => state.dataTemplate);
@@ -9,11 +9,7 @@ export default function About() {
 	return (
 		<section id='about' className='min-h-screen text-white'>
 			<AnimateSection>
-				<h1
-					className={`${libreBaskerville.className} text-goldYellow text-[3.5rem] lg:text-[8rem] font-bold uppercase text-right opacity-50`}
-				>
-					about
-				</h1>
+				<TitleSection title='about' />
 
 				<p className='max-w-[70rem] mt-5 text-[2rem] leading-[2.5rem]'>
 					I am harold michael mag-isa a dedicated front-end developer creating

@@ -5,6 +5,7 @@ import TitleSection from '../TitleSection';
 
 export default function About() {
 	const { expertiseList } = useAppSelector((state) => state.dataTemplate);
+	// "react-icons/si" icons for expertiselist
 
 	return (
 		<section id='about' className='min-h-screen text-white'>

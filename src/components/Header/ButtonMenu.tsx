@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import Link from 'next/link';
 
 import styles from './ButtonMenu.module.scss';
+import AnimateSection from '../Animated/AnimateSection';
 
 export default function ButtonMenu() {
 	const { navLinks } = useAppSelector((state) => state.dataTemplate);
@@ -25,7 +26,7 @@ export default function ButtonMenu() {
 			<AnimatePresence>
 				{isActive && (
 					<motion.div
-						className='absolute z-50 top-[12%] right-0 h-full w-full md:w-[30rem] bg-darkBlue'
+						className='fixed z-50 top-[12%] left-0 h-full w-full md:w-[30rem] bg-darkBlue'
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
 						exit={{ opacity: 0 }}
@@ -33,20 +34,21 @@ export default function ButtonMenu() {
 					>
 						<ul className='px-4 py-6 flex flex-col gap-10 text-white'>
 							{navLinks?.map((item, index) => (
-								<motion.li
-									key={index}
-									className={`text-2xl font-bold uppercase`}
-									initial={{ opacity: 0 }}
-									animate={{ opacity: 1 }}
-									transition={{ delay: 0.4, type: 'tween', stiffness: 90 }}
-								>
-									<Link
-										href={`#${item.path}`}
-										onClick={() => setIsActive(!isActive)}
+								<AnimateSection key={index}>
+									<motion.li
+										className={`text-2xl font-bold uppercase`}
+										initial={{ opacity: 0 }}
+										animate={{ opacity: 1 }}
+										transition={{ delay: 0.4, type: 'tween', stiffness: 90 }}
 									>
-										{item.name}
-									</Link>
-								</motion.li>
+										<Link
+											href={`#${item.path}`}
+											onClick={() => setIsActive(!isActive)}
+										>
+											{item.name}
+										</Link>
+									</motion.li>
+								</AnimateSection>
 							))}
 						</ul>
 					</motion.div>

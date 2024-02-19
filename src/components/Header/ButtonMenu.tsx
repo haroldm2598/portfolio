@@ -26,7 +26,7 @@ export default function ButtonMenu() {
 			<AnimatePresence>
 				{isActive && (
 					<motion.div
-						className='fixed z-50 top-[12%] left-0 h-full w-full md:w-[30rem] bg-darkBlue'
+						className='fixed z-50 top-16 left-0 min-h-screen w-full md:w-[30rem] bg-darkBlue'
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
 						exit={{ opacity: 0 }}

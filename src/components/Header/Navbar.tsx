@@ -30,7 +30,7 @@ export default function Navbar() {
 				{/* <StickyHeader> */}
 				<AnimatePresence>
 					<motion.div
-						className='flex lg:flex-row justify-between items-center text-white'
+						className='relative flex lg:flex-row justify-between items-center text-white'
 						variants={headerAnimateVariants}
 						initial='initial'
 						animate='open'

@@ -1,39 +1,49 @@
 'use client';
-import { useState } from 'react';
-import {
-	MotionValue,
-	motion,
-	useMotionValueEvent,
-	useScroll
-} from 'framer-motion';
+import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 
 export default function TestStickyHeader({
 	children
 }: Readonly<{ children: React.ReactNode }>) {
-	const { scrollY } = useScroll();
+	// problem lang nito yun scrollY get previous nag error dahil sa typescript
+	// const { scrollY } = useScroll();
+	// const [isHidden, SetIsHidden] = useState(false);
+
+	// useMotionValueEvent(scrollY, 'change', (latest) => {
+	// 	// find to fix this bug
+
+	// 	const previous = scrollY?.getPrevious();
+	// 	if (latest > previous && latest > 150) {
+	// 		SetIsHidden(true);
+	// 	} else {
+	// 		SetIsHidden(false);
+	// 	}
+	// });
+
 	const [isHidden, SetIsHidden] = useState(false);
+	const [lastScrollY, setLastScrollY] = useState(0);
 
-	//scrollY as {
-	// 	scrollY: MotionValue<number>;
-	// };
-	// interface PreviousProps {
-	// 	previous: MotionValue<number>;
-	// }
-
-	// interface PreviousProps {
-	// 	previous?: MotionValue<number | undefined>;
-	// }
-
-	useMotionValueEvent(scrollY, 'change', (latest) => {
-		// find to fix this bug
-
-		const previous = scrollY?.getPrevious();
-		if (latest > previous && latest > 150) {
+	const controlNavbar = () => {
+		if (window.scrollY > lastScrollY) {
+			// if scroll down hide the navbar
 			SetIsHidden(true);
 		} else {
+			// if scroll up show the navbar
 			SetIsHidden(false);
 		}
-	});
+
+		// remember current page location to use in the next move
+		setLastScrollY(window.scrollY);
+	};
+
+	useEffect(() => {
+		window.addEventListener('scroll', controlNavbar);
+
+		// cleanup function
+		return () => {
+			window.removeEventListener('scroll', controlNavbar);
+		};
+	}, [lastScrollY]);
 
 	return (
 		<motion.header

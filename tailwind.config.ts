@@ -16,7 +16,8 @@ const config: Config = {
 			colors: {
 				darkBlue: '#14213d',
 				goldYellow: '#fca311',
-				lightGrey: '#e5e5e5'
+				lightGrey: '#e5e5e5',
+				whiteBlur: 'rgba(255, 255, 255, 0.2)'
 			}
 		}
 	},

@@ -25,8 +25,9 @@ export default function ButtonMenu() {
 			</div>
 			<AnimatePresence>
 				{isActive && (
+					// Problem with this is parent has backdrop so the children will not able to apply the effect
 					<motion.div
-						className='fixed z-50 top-16 left-0 min-h-screen w-full md:w-[30rem] bg-darkBlue'
+						className={`${styles.containerBlur} fixed z-10 top-[4.25rem] right-[-10%] min-h-screen w-96 md:w-[30rem]`}
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
 						exit={{ opacity: 0 }}

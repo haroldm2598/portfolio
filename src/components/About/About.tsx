@@ -1,6 +1,7 @@
 'use client';
 import { useAppSelector } from '@/lib/redux/store';
 import AnimateSection from '../Animated/AnimateSection';
+import AnimeStaggered from '../Animated/AnimeStaggered';
 import TitleSection from '../TitleSection';
 
 export default function About() {
@@ -27,9 +28,9 @@ export default function About() {
 					<ul className='mt-5 h-72 flex flex-col flex-wrap gap-2'>
 						{expertiseList.map((list, index) => {
 							return (
-								<AnimateSection key={index}>
+								<AnimeStaggered key={index} custom={index}>
 									<li className='text-2xl uppercase'>{list.name}</li>
-								</AnimateSection>
+								</AnimeStaggered>
 							);
 						})}
 					</ul>

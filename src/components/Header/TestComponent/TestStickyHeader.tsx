@@ -49,11 +49,11 @@ export default function TestStickyHeader({
 		<motion.header
 			variants={{
 				visible: { y: 0 },
-				hidden: { y: '-100%' }
+				hidden: { y: '-200%' }
 			}}
 			animate={isHidden ? 'hidden' : 'visible'}
 			transition={{ duration: 0.35, ease: 'easeInOut' }}
-			className='w-full py-2 px-4 lg:px-8 fixed top-0 left-0 z-10 bg-black'
+			className='w-full py-2 px-4 lg:px-8 fixed top-5 left-0 z-10 bg-whiteBlur backdrop-blur'
 		>
 			{children}
 		</motion.header>

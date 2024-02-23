@@ -23,7 +23,7 @@ const containerVars = {
 	}
 };
 
-const childVars = {
+const mobileLinkVars = {
 	initial: {
 		y: '100vh',
 		transition: {
@@ -32,19 +32,25 @@ const childVars = {
 			ease: [0.37, 0, 0.63, 1]
 		}
 	},
-	open: {
+	open: (custom: number) => ({
 		y: 0,
 		transition: {
 			ease: [0, 0.55, 0.45, 1],
-			duration: 0.7,
+			duration: 0.2 * custom,
 			delay: 0.5
 		}
-	}
+	})
 };
 
-export default function AnimateSection({
-	children
-}: Readonly<{ children: React.ReactNode }>) {
+interface AnimeStaggeredProps {
+	children: React.ReactNode;
+	custom: number;
+}
+
+export default function AnimeStaggered({
+	children,
+	custom
+}: AnimeStaggeredProps) {
 	const ref = useRef(null);
 	const isInView = useInView(ref, { once: true });
 	const inViewControl = useAnimation();
@@ -64,9 +70,10 @@ export default function AnimateSection({
 				>
 					<div className='overflow-hidden'>
 						<motion.div
-							variants={childVars}
+							variants={mobileLinkVars}
 							initial='initial'
 							animate={inViewControl}
+							custom={custom}
 						>
 							{children}
 						</motion.div>

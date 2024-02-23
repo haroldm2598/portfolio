@@ -3,7 +3,7 @@ import TitleSection from '../TitleSection';
 
 export default function Contact() {
 	return (
-		<section id='contact' className='my-10 lg:min-h-screen'>
+		<section id='contact' className='my-20 lg:h-full'>
 			<AnimateSection>
 				<TitleSection title='get in touch' />
 			</AnimateSection>

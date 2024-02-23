@@ -5,12 +5,12 @@ import TitleSection from '../TitleSection';
 
 export default function Projects() {
 	return (
-		<section id='projects' className='my-10'>
+		<section id='projects' className='my-20'>
 			<AnimateSection>
 				<TitleSection title='projects' />
 			</AnimateSection>
 
-			<div className='w-full flex flex-col lg:flex-row justify-center items-center gap-5 lg:gap-20'>
+			<div className='bg-gray-900 w-fit mx-auto p-4 flex flex-col lg:flex-row justify-center items-center gap-5 lg:gap-20 transition-all ease-in-out duration-500 lg:hover:translate-y-[-2rem] lg:hover:translate-x-[2rem] rounded-lg'>
 				<AnimateImage imageSrc={ImageSrc} />
 
 				<AnimateSection>
@@ -18,14 +18,14 @@ export default function Projects() {
 						<h1 className='text-[2rem] leading-10 font-bold uppercase'>
 							Title
 						</h1>
-						<p className='text-[2rem] leading-10'>
+						<p className='text-lightGrey text-[2rem] leading-10 opacity-90'>
 							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis
 							voluptatibus rerum qui quasi odio aliquid deserunt tempora?
 							Mollitia doloribus ducimus velit voluptates praesentium commodi
 							reprehenderit quae id eum beatae. Doloribus?
 						</p>
 
-						<div className='last:mb-0 [&>*]:mr-4'>
+						<div className='last:mb-0 mt-10 [&>*]:mr-4'>
 							<button className='btn btn-outline btn-warning uppercase rounded-full hover:bg-black'>
 								github
 							</button>

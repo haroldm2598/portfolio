@@ -1,5 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { InitialState } from '@/lib/types/definition';
+import ImageSrc from '@/assets/images/devs.jpg';
 
 const initialState: InitialState = {
 	value: '',
@@ -22,6 +23,36 @@ const initialState: InitialState = {
 		{ name: 'node' },
 		{ name: 'express' },
 		{ name: 'mongo db' }
+	],
+	projectList: [
+		{
+			imageSrc: ImageSrc,
+			title: 'Todolist',
+			desc: 'Provide the essitial tasks todo things and record on the spot and friendly user',
+			githubLink: '',
+			livePreviewLink: ''
+		},
+		{
+			imageSrc: ImageSrc,
+			title: 'Resume Builder',
+			desc: 'Where create instant resume through online using a react js',
+			githubLink: '',
+			livePreviewLink: ''
+		},
+		{
+			imageSrc: ImageSrc,
+			title: 'Ecommerce',
+			desc: '',
+			githubLink: '',
+			livePreviewLink: ''
+		},
+		{
+			imageSrc: ImageSrc,
+			title: '',
+			desc: '',
+			githubLink: '',
+			livePreviewLink: ''
+		}
 	]
 };
 

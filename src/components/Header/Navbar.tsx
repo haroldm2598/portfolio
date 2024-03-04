@@ -4,7 +4,6 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { libreBaskerville } from '@/lib/fonts';
 import { useAppSelector } from '@/lib/redux/store';
 import ButtonMenu from './ButtonMenu';
-import StickyHeader from './StickyHeader';
 import TestStickyHeader from './TestComponent/TestStickyHeader';
 
 /* referrence for menu  */
@@ -25,9 +24,7 @@ export default function Navbar() {
 
 	return (
 		<>
-			{/* teststicky is not the official name when polish everything before deployment */}
 			<TestStickyHeader>
-				{/* <StickyHeader> */}
 				<AnimatePresence>
 					<motion.div
 						className='relative flex lg:flex-row justify-between items-center text-white'
@@ -58,18 +55,6 @@ export default function Navbar() {
 					</motion.div>
 				</AnimatePresence>
 			</TestStickyHeader>
-			{/* </StickyHeader> */}
-			{/* </TestStickyHeader> */}
 		</>
 	);
 }
-
-// import Headroom from 'react-headroom';
-/* <Headroom
-			style={{
-				webkitTransition: 'all .5s ease-in-out',
-				mozTransition: 'all .5s ease-in-out',
-				oTransition: 'all .5s ease-in-out',
-				transition: 'all .5s ease-in-out'
-			}}
-		></Headroom> */

@@ -3,8 +3,9 @@ import Link from 'next/link';
 import { AnimatePresence, motion } from 'framer-motion';
 import { libreBaskerville } from '@/lib/fonts';
 import { useAppSelector } from '@/lib/redux/store';
-import ButtonMenu from './ButtonMenu';
+import ButtonMenu from './Header/ButtonMenu';
 import TestStickyHeader from './TestComponent/TestStickyHeader';
+import MenuContainer from './Header/MenuContainer';
 
 /* referrence for menu  */
 /* https://www.youtube.com/watch?v=yoMf7BOujLA*/
@@ -55,6 +56,8 @@ export default function Navbar() {
 					</motion.div>
 				</AnimatePresence>
 			</TestStickyHeader>
+
+			<MenuContainer />
 		</>
 	);
 }

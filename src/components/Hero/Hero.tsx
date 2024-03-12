@@ -7,7 +7,7 @@ import AnimateImage from '../Animated/AnimateImage';
 
 export default function Hero() {
 	return (
-		<section className='lg:min-h-screen my-16 flex flex-col lg:flex-row justify-around items-center text-white gap-10 lg:gap-0'>
+		<section className='lg:min-h-screen my-20 lg:my-16 flex flex-col lg:flex-row justify-around items-center text-white gap-10 lg:gap-0'>
 			<AnimateSection>
 				<h1 className='order-2 lg:order-1 w-full lg:w-[30rem] text-[2.5rem] leading-10 lg:text-[4rem] lg:leading-[4.875rem] font-bold'>
 					a front-end developer bringing your ideas into life.

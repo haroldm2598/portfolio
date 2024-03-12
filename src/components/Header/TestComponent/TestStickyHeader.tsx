@@ -48,13 +48,12 @@ export default function TestStickyHeader({
 	return (
 		<motion.header
 			variants={{
-				visible: { y: 0 },
-				hidden: { y: '-200%' }
+				visible: { y: 0, opacity: 1 },
+				hidden: { y: '-200%', opacity: 0 }
 			}}
 			animate={isHidden ? 'hidden' : 'visible'}
 			transition={{ duration: 0.35, ease: 'easeInOut' }}
-			// still not final. Added mx-32 max-w-7xl rounded-lg
-			className='mx-32 max-w-7xl w-full py-2 px-4 lg:px-8 fixed top-5 left-0 z-10 bg-whiteBlur backdrop-blur rounded-lg'
+			className='mx-5 lg:mx-auto max-w-full lg:max-w-7xl py-2 px-4 lg:px-8 fixed top-5 left-0 right-0 z-10 bg-whiteBlur backdrop-filter backdrop-blur-xl rounded-lg'
 		>
 			{children}
 		</motion.header>

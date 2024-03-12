@@ -4,6 +4,7 @@ import ImageSrc from '@/assets/images/devs.jpg';
 
 const initialState: InitialState = {
 	value: '',
+	isActive: false,
 	navLinks: [
 		{ name: 'about', path: 'about' },
 		{ name: 'projects', path: 'projects' },
@@ -62,9 +63,12 @@ export const data = createSlice({
 	reducers: {
 		test: (state, action: PayloadAction<string>) => {
 			state.value = action.payload;
+		},
+		SetIsActive: (state, action: PayloadAction<boolean>) => {
+			state.isActive = action.payload;
 		}
 	}
 });
 
-export const { test } = data.actions;
+export const { test, SetIsActive } = data.actions;
 export default data.reducer;

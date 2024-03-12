@@ -26,10 +26,10 @@ export default function Projects() {
 						</p>
 
 						<div className='last:mb-0 mt-10 [&>*]:mr-4'>
-							<button className='btn btn-outline btn-warning uppercase rounded-full hover:bg-black'>
+							<button className='btn btn-outline btn-warning uppercase  hover:bg-black'>
 								github
 							</button>
-							<button className='btn btn-warning text-white uppercase rounded-full'>
+							<button className='btn btn-warning text-white uppercase '>
 								live preview
 							</button>
 						</div>
@@ -51,10 +51,10 @@ export default function Projects() {
 						</p>
 
 						<div className='last:mb-0 [&>*]:mr-4'>
-							<button className='btn btn-outline btn-warning uppercase rounded-full hover:bg-black'>
+							<button className='btn btn-outline btn-warning uppercase hover:bg-black'>
 								github
 							</button>
-							<button className='btn btn-warning text-white uppercase rounded-full'>
+							<button className='btn btn-warning text-white uppercase'>
 								live preview
 							</button>
 						</div>

@@ -43,17 +43,17 @@ const initialState: InitialState = {
 		{
 			imageSrc: ImageSrc,
 			title: 'Ecommerce',
-			desc: '',
-			githubLink: '',
-			livePreviewLink: ''
-		},
-		{
-			imageSrc: ImageSrc,
-			title: '',
-			desc: '',
+			desc: 'A reliable and friendly user ecommerce website. Where use an easy use of it!!',
 			githubLink: '',
 			livePreviewLink: ''
 		}
+		// {
+		// 	imageSrc: ImageSrc,
+		// 	title: '',
+		// 	desc: '',
+		// 	githubLink: '',
+		// 	livePreviewLink: ''
+		// }
 	]
 };
 

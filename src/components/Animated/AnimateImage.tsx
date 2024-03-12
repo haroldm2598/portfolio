@@ -28,7 +28,7 @@ export default function AnimateImage({ imageSrc }: AnimateImageProps) {
 				initial='hidden'
 				animate={inViewControl}
 				transition={{ duration: 1, delay: 0.5 }}
-				className='order-1 lg:order-2 max-w-[550px] max-h-[600px] mx-auto lg:mx-0 rounded-lg overflow-hidden'
+				className='order-1 lg:order-2 max-w-[550px] max-h-[300px] lg:max-h-[600px] mx-auto lg:mx-0 rounded-lg overflow-hidden'
 			>
 				<Image
 					alt='hero image'

@@ -9,12 +9,12 @@ export default function Projects() {
 	const { projectList } = useAppSelector((state) => state.dataTemplate);
 
 	return (
-		<section id='projects' className='my-20'>
+		<section id='projects' className='my-20 mx-0 lg:mx-16'>
 			<AnimateSection>
 				<TitleSection title='projects' />
 			</AnimateSection>
 
-			{projectList.map((item, index) => {
+			{/* {projectList.map((item, index) => {
 				return (
 					<div
 						key={index}
@@ -43,7 +43,7 @@ export default function Projects() {
 						</AnimateSection>
 					</div>
 				);
-			})}
+			})} */}
 		</section>
 	);
 }

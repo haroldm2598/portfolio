@@ -9,7 +9,7 @@ export default function About() {
 	// "react-icons/si" icons for expertiselist
 
 	return (
-		<section id='about' className='min-h-screen text-white'>
+		<section id='about' className='min-h-screen mx-0 lg:mx-16 text-white'>
 			<AnimateSection>
 				<TitleSection title='about' />
 

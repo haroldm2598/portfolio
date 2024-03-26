@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
 // working na siya palitan nalng un mga test name into real name
+// try mo ibahin nlng yun exit instead na opacity lang lagyan mo ng going right
 
 export default function TestMenuEffect({
 	children

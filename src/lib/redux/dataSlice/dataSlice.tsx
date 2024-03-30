@@ -54,6 +54,21 @@ const initialState: InitialState = {
 		// 	githubLink: '',
 		// 	livePreviewLink: ''
 		// }
+	],
+	testExpertiseList: [
+		{ imgSrc: require('@/assets/images/experties/html.svg').default },
+		{ imgSrc: require('@/assets/images/experties/css.svg').default },
+		{ imgSrc: require('@/assets/images/experties/javascript.svg').default },
+		{ imgSrc: require('@/assets/images/experties/sass.svg').default },
+		{ imgSrc: require('@/assets/images/experties/tailwindcss.svg').default },
+		{ imgSrc: require('@/assets/images/experties/reactjs.svg').default },
+		{ imgSrc: require('@/assets/images/experties/nextjs.svg').default },
+		{ imgSrc: require('@/assets/images/experties/github.svg').default },
+		{ imgSrc: require('@/assets/images/experties/git.svg').default },
+		{ imgSrc: require('@/assets/images/experties/typescript.svg').default },
+		{ imgSrc: require('@/assets/images/experties/nodejs.svg').default },
+		{ imgSrc: require('@/assets/images/experties/express.svg').default },
+		{ imgSrc: require('@/assets/images/experties/mongodb.svg').default }
 	]
 };
 

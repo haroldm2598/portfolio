@@ -6,6 +6,7 @@ export interface InitialState {
 	navLinks: Array<NavLinksProps>;
 	expertiseList: Array<ExpertiseProps>;
 	projectList: Array<ProjectProps>;
+	testExpertiseList: Array<TestExpertiseProps>;
 }
 
 interface NavLinksProps {
@@ -23,4 +24,8 @@ interface ProjectProps {
 	desc: string;
 	githubLink: string;
 	livePreviewLink: string;
+}
+
+interface TestExpertiseProps {
+	imgSrc: string;
 }

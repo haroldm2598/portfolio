@@ -1,12 +1,14 @@
 'use client';
+import Image from 'next/image';
 import { useAppSelector } from '@/lib/redux/store';
 import AnimateSection from '../Animated/AnimateSection';
 import AnimeStaggered from '../Animated/AnimeStaggered';
 import TitleSection from '../TitleSection';
 
 export default function About() {
-	const { expertiseList } = useAppSelector((state) => state.dataTemplate);
-	// "react-icons/si" icons for expertiselist
+	const { expertiseList, testExpertiseList } = useAppSelector(
+		(state) => state.dataTemplate
+	);
 
 	return (
 		<section id='about' className='min-h-screen mx-0 lg:mx-16 text-white'>
@@ -36,6 +38,19 @@ export default function About() {
 					</ul>
 				</div>
 			</AnimateSection>
+
+			<div className='my-20 grid grid-cols-3 gap-10'>
+				{testExpertiseList.map((item, index) => (
+					<Image
+						key={index}
+						src={item.imgSrc}
+						height={300}
+						width={300}
+						className='h-40 w-40 object-cover rounded-xl'
+						alt='thumbnail'
+					/>
+				))}
+			</div>
 		</section>
 	);
 }

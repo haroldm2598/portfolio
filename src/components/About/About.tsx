@@ -23,7 +23,7 @@ export default function About() {
 				</p>
 			</AnimateSection>
 
-			<AnimateSection>
+			{/* <AnimateSection>
 				<div className='mt-10'>
 					<h1 className='text-[2rem] leading-10'>Here are my stacks</h1>
 
@@ -37,20 +37,25 @@ export default function About() {
 						})}
 					</ul>
 				</div>
-			</AnimateSection>
+			</AnimateSection> */}
 
-			<div className='my-20 grid grid-cols-3 gap-10'>
-				{testExpertiseList.map((item, index) => (
-					<Image
-						key={index}
-						src={item.imgSrc}
-						height={300}
-						width={300}
-						className='h-40 w-40 object-cover rounded-xl'
-						alt='thumbnail'
-					/>
-				))}
-			</div>
+			<AnimateSection>
+				<h1 className='mt-10 text-[2rem] leading-10'>Here are my stacks</h1>
+
+				<div className='my-20 grid grid-cols-2 lg:grid-cols-3 gap-5 place-items-center'>
+					{testExpertiseList.map((item, index) => (
+						<AnimeStaggered key={index} custom={index}>
+							<div className='w-32 h-32 lg:w-40 lg:h-40'>
+								<Image
+									src={item.imgSrc}
+									className='h-full w-full object-contain'
+									alt='thumbnail'
+								/>
+							</div>
+						</AnimeStaggered>
+					))}
+				</div>
+			</AnimateSection>
 		</section>
 	);
 }

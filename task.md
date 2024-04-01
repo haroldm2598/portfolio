@@ -4,4 +4,4 @@
   -- dynamic image must be implemented
   -- implement new div or section for expertise images parent set a w & h then children w & h a full object cover
 
-- after non projects naman ibahin yun size ng width ng per projects instead na fix lang nasisira siya sa large size
+- after non projects naman ibahin yun size ng width ng per projects instead na fix lang nasisira siya sa large size on progress naman dine

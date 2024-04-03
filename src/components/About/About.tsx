@@ -14,10 +14,11 @@ export default function About() {
 				<TitleSection title='about' />
 
 				<p className='max-w-[70rem] mt-5 text-[2rem] leading-[2.5rem]'>
-					I am harold michael mag-isa a dedicated front-end developer creating
-					stunning, functional website. A user-friendly web experienced who
-					loves to develope a website where analytical and problem solving
-					provide solutions to your needs
+					{/* I am harold michael mag-isa */}
+					hey mike here. A dedicated front-end developer creating stunning,
+					functional website. A user-friendly web experienced who loves to
+					develope a website where analytical and problem solving provide
+					solutions to your needs
 				</p>
 			</AnimateSection>
 
@@ -26,7 +27,7 @@ export default function About() {
 
 				<div className='my-20 grid grid-cols-2 lg:grid-cols-3 gap-5 place-items-center'>
 					{expertiseList.map((item, index) => (
-						<AnimeStaggered key={index} custom={index}>
+						<AnimeStaggered key={index} custom={1 + index}>
 							<div className='w-32 h-32 lg:w-40 lg:h-40'>
 								<Image
 									src={item.imgSrc}

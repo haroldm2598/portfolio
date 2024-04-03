@@ -1,13 +1,13 @@
 'use client';
 import Link from 'next/link';
 import { AnimatePresence, motion } from 'framer-motion';
-import AnimateSection from '../../ui/Animated/AnimateSection';
+import AnimateSection from '@/components/ui/Animated/AnimateSection';
+import AnimateMenuEffect from '@/components/ui/Animated/AnimateMenuEffect';
 
 // RTK LIB
 import { useDispatch } from 'react-redux';
 import { AppDispatch, useAppSelector } from '@/lib/redux/store';
 import { SetIsActive } from '@/lib/redux/dataSlice/dataSlice';
-import TestMenuEffect from '../TestComponent/TestMenuEffect';
 
 export default function MenuContainer() {
 	const { navLinks, isActive } = useAppSelector((state) => state.dataTemplate);
@@ -16,8 +16,7 @@ export default function MenuContainer() {
 	return (
 		<AnimatePresence>
 			{isActive && (
-				// rename this for animation
-				<TestMenuEffect>
+				<AnimateMenuEffect>
 					<motion.div
 					// className='mx-5 px-0 fixed z-10 top-[6rem] left-0 right-0 min-h-screen max-w-full md:w-[30rem] bg-whiteBlur backdrop-blur-xl rounded-lg'
 					// initial={{ opacity: 0 }}
@@ -45,7 +44,7 @@ export default function MenuContainer() {
 							))}
 						</ul>
 					</motion.div>
-				</TestMenuEffect>
+				</AnimateMenuEffect>
 			)}
 		</AnimatePresence>
 	);

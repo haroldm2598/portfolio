@@ -4,9 +4,8 @@ export interface InitialState {
 	value: string | null;
 	isActive: boolean;
 	navLinks: Array<NavLinksProps>;
-	expertiseList: Array<ExpertiseProps>;
 	projectList: Array<ProjectProps>;
-	testExpertiseList: Array<TestExpertiseProps>;
+	expertiseList: Array<{ imgSrc: string }>;
 }
 
 interface NavLinksProps {
@@ -14,18 +13,10 @@ interface NavLinksProps {
 	path: string;
 }
 
-interface ExpertiseProps {
-	name: string;
-}
-
-interface ProjectProps {
+export interface ProjectProps {
 	imageSrc: StaticImageData;
 	title: string;
 	desc: string;
 	githubLink: string;
 	livePreviewLink: string;
-}
-
-interface TestExpertiseProps {
-	imgSrc: string;
 }

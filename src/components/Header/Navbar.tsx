@@ -3,14 +3,10 @@ import Link from 'next/link';
 import { AnimatePresence, motion } from 'framer-motion';
 import { libreBaskerville } from '@/lib/fonts';
 import { useAppSelector } from '@/lib/redux/store';
-import ButtonMenu from './Header/ButtonMenu';
-import TestStickyHeader from './TestComponent/TestStickyHeader';
-import MenuContainer from './Header/MenuContainer';
-import TestMenuEffect from './TestComponent/TestMenuEffect';
 
-/* referrence for menu  */
-/* https://www.youtube.com/watch?v=yoMf7BOujLA*/
-/* https://djudesign.com/ */
+import ButtonMenu from './Header/ButtonMenu';
+import MenuContainer from './Header/MenuContainer';
+import StickyHeader from './Header/StickyNavbar';
 
 const headerAnimateVariants = {
 	initial: { opacity: 0, y: '-100%' },
@@ -26,7 +22,7 @@ export default function Navbar() {
 
 	return (
 		<>
-			<TestStickyHeader>
+			<StickyHeader>
 				<AnimatePresence>
 					<motion.div
 						className='relative flex lg:flex-row justify-between items-center text-white'
@@ -56,7 +52,7 @@ export default function Navbar() {
 						<ButtonMenu />
 					</motion.div>
 				</AnimatePresence>
-			</TestStickyHeader>
+			</StickyHeader>
 
 			<MenuContainer />
 		</>

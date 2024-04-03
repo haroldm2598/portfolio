@@ -2,8 +2,8 @@
 
 import ImageSrc from '@/assets/images/devs.jpg';
 
-import AnimateSection from '../Animated/AnimateSection';
-import AnimateImage from '../Animated/AnimateImage';
+import AnimateSection from '../ui/Animated/AnimateSection';
+import AnimateImage from '../ui/Animated/AnimateImage';
 
 export default function Hero() {
 	return (

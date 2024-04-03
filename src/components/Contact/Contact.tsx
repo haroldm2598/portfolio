@@ -1,4 +1,4 @@
-import AnimateSection from '../Animated/AnimateSection';
+import AnimateSection from '../ui/Animated/AnimateSection';
 import TitleSection from '../TitleSection';
 
 export default function Contact() {

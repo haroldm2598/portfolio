@@ -10,52 +10,30 @@ const initialState: InitialState = {
 		{ name: 'projects', path: 'projects' },
 		{ name: 'contact', path: 'contact' }
 	],
-	expertiseList: [
-		{ name: 'html' },
-		{ name: 'css' },
-		{ name: 'javascript' },
-		{ name: 'sass' },
-		{ name: 'tailwindcss' },
-		{ name: 'reactjs' },
-		{ name: 'nextjs' },
-		{ name: 'github' },
-		{ name: 'git' },
-		{ name: 'typescript' },
-		{ name: 'node' },
-		{ name: 'express' },
-		{ name: 'mongo db' }
-	],
 	projectList: [
 		{
 			imageSrc: ImageSrc,
 			title: 'Todolist',
 			desc: 'Provide the essitial tasks todo things and record on the spot and friendly user',
-			githubLink: '',
-			livePreviewLink: ''
+			githubLink: 'https://github.com/haroldm2598/Project-todolist',
+			livePreviewLink: 'https://haroldm2598.github.io/Project-todolist/'
 		},
 		{
 			imageSrc: ImageSrc,
 			title: 'Resume Builder',
 			desc: 'Where create instant resume through online using a react js',
-			githubLink: '',
-			livePreviewLink: ''
+			githubLink: 'https://github.com/haroldm2598/Project-resume',
+			livePreviewLink: 'https://haroldm2598.github.io/Project-resume/'
 		},
 		{
 			imageSrc: ImageSrc,
 			title: 'Ecommerce',
 			desc: 'A reliable and friendly user ecommerce website. Where use an easy use of it!!',
-			githubLink: '',
-			livePreviewLink: ''
+			githubLink: 'https://github.com/haroldm2598/Project-ecommerce',
+			livePreviewLink: 'https://haroldm2598.github.io/Project-ecommerce/'
 		}
-		// {
-		// 	imageSrc: ImageSrc,
-		// 	title: '',
-		// 	desc: '',
-		// 	githubLink: '',
-		// 	livePreviewLink: ''
-		// }
 	],
-	testExpertiseList: [
+	expertiseList: [
 		{ imgSrc: require('@/assets/images/experties/html.svg').default },
 		{ imgSrc: require('@/assets/images/experties/css.svg').default },
 		{ imgSrc: require('@/assets/images/experties/javascript.svg').default },

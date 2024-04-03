@@ -1,9 +1,10 @@
 'use client';
 import { useAppSelector } from '@/lib/redux/store';
 
-import AnimateImage from '../Animated/AnimateImage';
-import AnimateSection from '../Animated/AnimateSection';
+import AnimateImage from '../ui/Animated/AnimateImage';
+import AnimateSection from '../ui/Animated/AnimateSection';
 import TitleSection from '../TitleSection';
+import ThreeDCard from './ThreeDCard';
 
 export default function Projects() {
 	const { projectList } = useAppSelector((state) => state.dataTemplate);
@@ -14,7 +15,12 @@ export default function Projects() {
 				<TitleSection title='projects' />
 			</AnimateSection>
 
-			{/* {projectList.map((item, index) => {
+			<ThreeDCard data={projectList} />
+		</section>
+	);
+}
+
+/* {projectList.map((item, index) => {
 				return (
 					<div
 						key={index}
@@ -43,34 +49,4 @@ export default function Projects() {
 						</AnimateSection>
 					</div>
 				);
-			})} */}
-		</section>
-	);
-}
-
-/* <div className='w-full mt-10 flex flex-col lg:flex-row justify-center items-center gap-5 lg:gap-20'>
-				<AnimateSection>
-					<div className='max-w-[40rem] text-white [&>*]:mb-4'>
-						<h1 className='text-[2rem] leading-10 font-bold uppercase'>
-							Title
-						</h1>
-						<p className='text-[2rem] leading-10'>
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis
-							voluptatibus rerum qui quasi odio aliquid deserunt tempora?
-							Mollitia doloribus ducimus velit voluptates praesentium commodi
-							reprehenderit quae id eum beatae. Doloribus?
-						</p>
-
-						<div className='last:mb-0 [&>*]:mr-4'>
-							<button className='btn btn-outline btn-warning uppercase hover:bg-black'>
-								github
-							</button>
-							<button className='btn btn-warning text-white uppercase'>
-								live preview
-							</button>
-						</div>
-					</div>
-				</AnimateSection>
-
-				<AnimateImage imageSrc={ImageSrc} />
-			</div> */
+			})} */

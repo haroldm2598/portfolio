@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { AnimatePresence, motion } from 'framer-motion';
-import AnimateSection from '../../Animated/AnimateSection';
+import AnimateSection from '../../ui/Animated/AnimateSection';
 
 // RTK LIB
 import { useDispatch } from 'react-redux';
@@ -16,6 +16,7 @@ export default function MenuContainer() {
 	return (
 		<AnimatePresence>
 			{isActive && (
+				// rename this for animation
 				<TestMenuEffect>
 					<motion.div
 					// className='mx-5 px-0 fixed z-10 top-[6rem] left-0 right-0 min-h-screen max-w-full md:w-[30rem] bg-whiteBlur backdrop-blur-xl rounded-lg'

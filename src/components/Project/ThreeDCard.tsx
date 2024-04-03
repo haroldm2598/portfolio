@@ -2,24 +2,26 @@
 import Image from 'next/image';
 import { TbSourceCode } from 'react-icons/tb';
 import { CgWebsite } from 'react-icons/cg';
-
-import { useAppSelector } from '@/lib/redux/store';
 import { CardBody, CardContainer, CardItem } from '../ui/3d-card';
+import { ProjectProps } from '@/lib/types/definition';
 
-export function ThreeDCardDemo() {
-	const { projectList } = useAppSelector((state) => state.dataTemplate);
+interface ThreeDCardProps {
+	data: Array<ProjectProps>;
+}
 
+export default function ThreeDCard({ data }: ThreeDCardProps) {
 	return (
-		<section className='lg:mx-16 max-w-7xl grid grid-cols-1 lg:grid-cols-2 lg:gap-10'>
-			{projectList.map((item, index) => {
+		<section className=' max-w-7xl grid grid-cols-1 lg:grid-cols-2 lg:gap-10'>
+			{data.map((item, index) => {
 				return (
 					<CardContainer key={index} className='inter-var shadow-xl'>
-						<CardBody className='bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  '>
+						<CardBody className='bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-full lg:w-[26rem] xl:w-[30rem] h-auto rounded-xl p-6 border  '>
 							<CardItem translateZ='70' className='w-full mt-4'>
 								<Image
 									src={item.imageSrc}
-									height='1500'
-									width='1500'
+									// default h&w = 1500
+									height='0'
+									width='0'
 									className='h-72 w-full object-cover rounded-xl group-hover/card:shadow-xl'
 									alt='thumbnail'
 								/>

@@ -1,6 +1,7 @@
 import AnimateSection from '../ui/Animated/AnimateSection';
 import TitleSection from '../TitleSection';
 import Form from './Form';
+import FormTest from './FormTest';
 
 export default function Contact() {
 	return (
@@ -10,7 +11,8 @@ export default function Contact() {
 			</AnimateSection>
 
 			<AnimateSection>
-				<Form />
+				{/* <Form /> */}
+				<FormTest />
 			</AnimateSection>
 		</section>
 	);

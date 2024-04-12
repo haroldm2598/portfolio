@@ -26,4 +26,9 @@
   -- all about implementing emailjs for form submission DONE
   --- useref is the problem if i pull null inside (form.current change to e.currentTarget) DONE
   -- create a validation for input text if blank then it will not proceed to submission
-  -- https://www.youtube.com/watch?v=bMq2riFCF90 REFERRENCE
+  -- seperate a form with new component DONE
+  -- email at message lang siguro ang ilagay na validation
+  -- https://www.youtube.com/watch?v=bMq2riFCF90 REFERENCE
+  -- https://www.geeksforgeeks.org/how-to-add-form-validation-in-next-js/ FORM VALIDATION REFERENCE
+  -- https://canopas.com/next-js-how-to-validate-forms-on-the-server-side-using-zod USING ZOD VALIDATION
+  -- https://github.com/httpArbaz/SignUp-Nextjs/blob/main/app/components/SignUpForm.js USING TSX

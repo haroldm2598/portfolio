@@ -1,6 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { InitialState } from '@/lib/types/definition';
-import ImageSrc from '@/assets/images/devs.jpg';
 
 const initialState: InitialState = {
 	value: '',

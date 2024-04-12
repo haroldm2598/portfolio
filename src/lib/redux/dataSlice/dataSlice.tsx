@@ -12,21 +12,21 @@ const initialState: InitialState = {
 	],
 	projectList: [
 		{
-			imageSrc: ImageSrc,
+			imageSrc: require('@/assets/images/projects/todolist.png').default,
 			title: 'Todolist',
 			desc: 'Provide the essitial tasks todo things and record on the spot and friendly user',
 			githubLink: 'https://github.com/haroldm2598/Project-todolist',
 			livePreviewLink: 'https://haroldm2598.github.io/Project-todolist/'
 		},
 		{
-			imageSrc: ImageSrc,
+			imageSrc: require('@/assets/images/projects/resume-original.png').default,
 			title: 'Resume Builder',
 			desc: 'Where create instant resume through online using a react js',
 			githubLink: 'https://github.com/haroldm2598/Project-resume',
 			livePreviewLink: 'https://haroldm2598.github.io/Project-resume/'
 		},
 		{
-			imageSrc: ImageSrc,
+			imageSrc: require('@/assets/images/projects/ecommerce.png').default,
 			title: 'Ecommerce',
 			desc: 'A reliable and friendly user ecommerce website. Where use an easy use of it!!',
 			githubLink: 'https://github.com/haroldm2598/Project-ecommerce',

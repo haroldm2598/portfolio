@@ -17,11 +17,13 @@
 - project section
 - after non projects naman ibahin yun size ng width ng per projects instead na fix lang nasisira siya sa large size on progress naman dine
   -- sizing an width is done DONE
-  -- apply actual photos of projects
-  --- edit your photos in photoshop or illustrator (todolist & resume DONE but ecommerce rework)
+  -- apply actual photos of projects DONE
+  --- edit your photos in photoshop or illustrator DONE
   -- lalagyan ng mga animatestarggered per projects DONE
   --- implement but ang bilis nila
 
 - contact section
-  -- all about implementing emailjs for form submission
-  -- https://www.youtube.com/watch?v=bMq2riFCF90
+  -- all about implementing emailjs for form submission DONE
+  --- useref is the problem if i pull null inside (form.current change to e.currentTarget) DONE
+  -- create a validation for input text if blank then it will not proceed to submission
+  -- https://www.youtube.com/watch?v=bMq2riFCF90 REFERRENCE

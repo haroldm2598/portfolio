@@ -1,5 +1,6 @@
 'use client';
 import Image from 'next/image';
+import Link from 'next/link';
 import { TbSourceCode } from 'react-icons/tb';
 import { CgWebsite } from 'react-icons/cg';
 import { CardBody, CardContainer, CardItem } from '../ui/3d-card';
@@ -50,7 +51,7 @@ export default function ThreeDCard({ data }: ThreeDCardProps) {
 											as='button'
 											className='flex items-center gap-2 px-4 py-2 rounded-xl bg-white border-2 border-goldYellow dark:bg-white dark:text-black text-black text-sm font-bold  [&>*:nth-child(odd)]:duration-200 [&>*:nth-child(odd)]:hover:translate-x-1'
 										>
-											source code
+											<Link href={item.githubLink}>source code</Link>
 											<TbSourceCode size={16} />
 										</CardItem>
 										<CardItem
@@ -58,7 +59,7 @@ export default function ThreeDCard({ data }: ThreeDCardProps) {
 											as='button'
 											className='flex items-center gap-2 px-4 py-2 rounded-xl bg-goldYellow dark:bg-white dark:text-black text-white text-sm font-bold [&>*:nth-child(odd)]:duration-200 [&>*:nth-child(odd)]:hover:translate-x-1'
 										>
-											live preview
+											<Link href={item.livePreviewLink}>live preview</Link>
 											<span>
 												<CgWebsite size={16} />
 											</span>

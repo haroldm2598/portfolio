@@ -7,7 +7,7 @@ interface ErrorProps {
 	message?: string;
 }
 
-export default function Form() {
+export default function FormTest() {
 	// for emailjs
 	const form = useRef(null);
 
@@ -16,10 +16,6 @@ export default function Form() {
 	const [message, setMessage] = useState('');
 	const [errors, setErrors] = useState<ErrorProps>({});
 	const [isFormValid, setIsFormValid] = useState(false);
-
-	useEffect(() => {
-		validationForm();
-	}, [email, message]);
 
 	const validationForm = () => {
 		let errors: ErrorProps = {};
@@ -40,6 +36,7 @@ export default function Form() {
 
 	const sendEmail = (e: FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
+		validationForm();
 
 		if (isFormValid) {
 			emailjs
@@ -54,8 +51,6 @@ export default function Form() {
 						console.log('FAILED...', error.text);
 					}
 				);
-		} else {
-			console.log('please correct the form');
 		}
 	};
 	return (
@@ -93,12 +88,7 @@ export default function Form() {
 				value={message}
 				onChange={(e) => setMessage(e.target.value)}
 			></textarea>
-			<button
-				className={`w-full btn btn-warning text-white uppercase rounded-lg ${
-					!isFormValid ? 'btn-disabled' : ''
-				}`}
-				disabled={!isFormValid}
-			>
+			<button className='w-full btn btn-warning text-white uppercase rounded-lg'>
 				submit
 			</button>
 		</form>

@@ -1,12 +1,19 @@
-- done nako sa header section
+- UI/UX (figma)
+  -- change font family
+  -- change palatte
+  -- optional dark mode
 
+- done nako sa header section
+- - ALL MUST BE IN CENTER WHEN HAVING A above XL SCREEN
 - navbar section
   -- fix delayed opacity for menucontainer. must be equal to navbar opacity
   -- https://www.youtube.com/watch?v=yoMf7BOujLA
   -- mukhang may bug sa navbar section nasira ata yun tamang sukat DONE
 
 - hero section
-  -- referrence https://djudesign.com/
+  -- referrence https://djudesign.com/  
+  -- new task split the paragraph per whitespace or word not by letter
+  --- working about implementation new animation but when inserting new function like join(' ') it becoming an [object object] therefore find a solution where combine the string word
 
 - about section
 - mostly sa about naman palitan mo ng icons yun mga expertise instead lang na name

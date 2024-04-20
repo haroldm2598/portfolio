@@ -20,7 +20,7 @@ export default function ThreeDCard({ data }: ThreeDCardProps) {
 					return (
 						<AnimeStaggered key={index} custom={2 + index}>
 							<CardContainer className='inter-var shadow-xl'>
-								<CardBody className='bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-full lg:w-[26rem] xl:w-[30rem] h-auto rounded-xl p-6 border  '>
+								<CardBody className='bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-full lg:w-[26rem] xl:w-[30rem] h-auto rounded-xl p-6 border '>
 									<CardItem translateZ='70' className='w-full mt-4'>
 										<Image
 											src={item.imageSrc}
@@ -49,7 +49,7 @@ export default function ThreeDCard({ data }: ThreeDCardProps) {
 										<CardItem
 											translateZ='30'
 											as='button'
-											className='flex items-center gap-2 px-4 py-2 rounded-xl bg-white border-2 border-goldYellow dark:bg-white dark:text-black text-black text-sm font-bold  [&>*:nth-child(odd)]:duration-200 [&>*:nth-child(odd)]:hover:translate-x-1'
+											className='flex items-center gap-2 px-4 py-2 rounded-xl bg-white border-2 border-darkBlue dark:bg-white dark:text-black text-black text-sm font-bold  [&>*:nth-child(odd)]:duration-200 [&>*:nth-child(odd)]:hover:translate-x-1'
 										>
 											<Link href={item.githubLink}>source code</Link>
 											<TbSourceCode size={16} />
@@ -57,7 +57,7 @@ export default function ThreeDCard({ data }: ThreeDCardProps) {
 										<CardItem
 											translateZ='30'
 											as='button'
-											className='flex items-center gap-2 px-4 py-2 rounded-xl bg-goldYellow dark:bg-white dark:text-black text-white text-sm font-bold [&>*:nth-child(odd)]:duration-200 [&>*:nth-child(odd)]:hover:translate-x-1'
+											className='flex items-center gap-2 px-4 py-2 rounded-xl bg-darkBlue dark:bg-white dark:text-black text-white text-sm font-bold [&>*:nth-child(odd)]:duration-200 [&>*:nth-child(odd)]:hover:translate-x-1'
 										>
 											<Link href={item.livePreviewLink}>live preview</Link>
 											<span>

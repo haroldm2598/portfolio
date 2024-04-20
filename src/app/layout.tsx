@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<body className={`${montserrat.className} p-5 lg:p-10`}>
+			<body className={montserrat.className}>
 				<ReduxProvider>
 					<Navbar />
 					{children}

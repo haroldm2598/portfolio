@@ -25,7 +25,7 @@ export default function Hero() {
 
 			<div>
 				<AnimateParagraph
-					className='order-2 lg:order-1 w-full lg:w-[30rem] text-[2.5rem] leading-10 lg:text-[4rem] lg:leading-[4.875rem] font-bold'
+					className='order-2 lg:order-1 w-full lg:w-[30rem] text-veryDarkGray text-[2.5rem] leading-10 lg:text-[4rem] lg:leading-[4.875rem] font-bold'
 					text='a front-end developer bringing your ideas into life.'
 					once={true}
 				/>

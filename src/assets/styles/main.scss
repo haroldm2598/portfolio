@@ -13,13 +13,14 @@ body {
 	scroll-behavior: smooth;
 }
 body {
-	background: rgb(0, 0, 0);
-	background: linear-gradient(
-		90deg,
-		rgba(20, 33, 61, 1) 0%,
-		rgba(12, 15, 21, 1) 60%,
-		rgba(0, 0, 0, 1) 100%
-	);
+	// background: rgb(0, 0, 0);
+	// background: linear-gradient(
+	// 	90deg,
+	// 	rgba(20, 33, 61, 1) 0%,
+	// 	rgba(12, 15, 21, 1) 60%,
+	// 	rgba(0, 0, 0, 1) 100%
+	// );
+	background-color: #fafafa;
 	overflow-x: hidden;
 }
 

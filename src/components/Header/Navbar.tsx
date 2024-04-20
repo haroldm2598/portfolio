@@ -31,7 +31,7 @@ export default function Navbar() {
 						animate='open'
 					>
 						<h1
-							className={`${libreBaskerville.className} text-[2.5rem] font-bold`}
+							className={`${libreBaskerville.className} text-veryDarkGray text-[2.5rem] font-bold`}
 						>
 							RoldDev
 						</h1>
@@ -40,7 +40,7 @@ export default function Navbar() {
 							{navLinks.map((item, index) => {
 								return (
 									<li
-										className={`${libreBaskerville.className} text-xl font-bold uppercase cursor-pointer transition-all duration-300 ease-in-out delay-100 hover:text-gray-400`}
+										className={`${libreBaskerville.className} text-veryDarkGray text-xl font-bold uppercase cursor-pointer transition-all duration-300 ease-in-out delay-100 hover:text-gray-400`}
 										key={index}
 									>
 										<Link href={`#${item.path}`}>{item.name}</Link>

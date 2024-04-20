@@ -14,10 +14,12 @@ const config: Config = {
 					'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'
 			},
 			colors: {
+				veryDarkGray: '#292929',
+				veryBlue: '#005691',
 				darkBlue: '#14213d',
 				goldYellow: '#fca311',
 				lightGrey: '#e5e5e5',
-				whiteBlur: 'rgba(255, 255, 255, 0.2)'
+				whiteBlur: 'rgba(183, 211, 229, 0.2)'
 			}
 		}
 	},

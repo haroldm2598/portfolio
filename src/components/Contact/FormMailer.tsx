@@ -70,7 +70,7 @@ export default function FormMailer() {
 				transition={Bounce}
 			/>
 			<form
-				className='max-w-[40rem] mx-auto my-10 [&>*]:mb-4'
+				className='max-w-[40rem] mx-auto mb-10 [&>*]:mb-4'
 				onSubmit={handleSubmit(sendEmail)}
 			>
 				<input
@@ -100,7 +100,7 @@ export default function FormMailer() {
 				)}
 
 				<button
-					className='w-full btn btn-warning text-white uppercase rounded-lg'
+					className='w-full btn bg-veryBlue hover:bg-black text-white uppercase rounded-lg'
 					disabled={!isDirty || !isValid}
 				>
 					submit

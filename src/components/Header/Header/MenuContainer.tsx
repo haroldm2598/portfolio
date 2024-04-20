@@ -28,7 +28,7 @@ export default function MenuContainer() {
 							{navLinks?.map((item, index) => (
 								<AnimateSection key={index}>
 									<motion.li
-										className={`text-2xl font-bold uppercase`}
+										className={`text-2xl text-veryDarkGray font-bold uppercase`}
 										initial={{ opacity: 0 }}
 										animate={{ opacity: 1 }}
 										transition={{ delay: 0.4, type: 'tween', stiffness: 90 }}

@@ -34,7 +34,7 @@ export default function StickyNavbar({
 			}}
 			animate={isHidden ? 'hidden' : 'visible'}
 			transition={{ duration: 0.35, ease: 'easeInOut' }}
-			className='mx-5 lg:mx-auto max-w-full lg:max-w-[85rem] py-2 px-4 lg:px-6 fixed top-5 left-0 right-0 z-10 bg-whiteBlur backdrop-filter backdrop-blur-xl rounded-lg'
+			className='mx-5 lg:mx-auto max-w-full lg:max-w-[85rem] py-2 px-4 lg:px-6 fixed top-5 left-0 right-0 z-10 bg-whiteBlur backdrop-filter backdrop-blur-xl rounded-lg shadow-lg'
 		>
 			{children}
 		</motion.header>

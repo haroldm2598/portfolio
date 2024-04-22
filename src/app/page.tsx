@@ -20,7 +20,7 @@ export default function page() {
 				<HeroTest />
 			</Wrapper>
 
-			<Wrapper className='bg-white'>
+			<Wrapper className='bg-white dark:bg-darkMode100'>
 				<AboutTest />
 			</Wrapper>
 
@@ -28,7 +28,7 @@ export default function page() {
 				<Projects />
 			</Wrapper>
 
-			<Wrapper className='bg-white'>
+			<Wrapper className='bg-white dark:bg-darkMode100'>
 				<ContactTest />
 			</Wrapper>
 		</div>

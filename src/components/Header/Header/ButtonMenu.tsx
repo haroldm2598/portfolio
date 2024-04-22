@@ -15,7 +15,7 @@ export default function ButtonMenu() {
 				onClick={() => {
 					dispatch(SetIsActive(!isActive));
 				}}
-				className={`${styles.button} last:px-0 flex items-center justify-center lg:hidden`}
+				className={`${styles.button} last:px-0 flex items-center justify-center`}
 			>
 				<div
 					className={`${styles.burger} ${isActive ? styles.burgerActive : ''}`}

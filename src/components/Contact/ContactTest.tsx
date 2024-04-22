@@ -14,28 +14,28 @@ export default function Contact() {
 			</AnimateSection>
 
 			<div className='flex flex-col lg:flex-row items-center gap-10 lg:gap-0'>
-				<div className='flex-1 flex lg:flex-col gap-10'>
+				<div className='flex-1 flex flex-wrap lg:flex-col gap-10'>
 					<div className='flex items-center gap-2'>
-						<SiGithub size={40} />
+						<SiGithub size={40} className='dark:text-white' />
 						<div>
-							<h1 className='font-semibold'>Github</h1>
-							<span>@link</span>
+							<h1 className='font-semibold dark:text-white'>Github</h1>
+							<span className='dark:text-white'>@link</span>
 						</div>
 					</div>
 
 					<div className='flex items-center gap-2'>
-						<SiLinkedin size={40} />
+						<SiLinkedin size={40} className='dark:text-white' />
 						<div>
-							<h1 className='font-semibold'>Linkedin</h1>
-							<span>@link</span>
+							<h1 className='font-semibold dark:text-white'>Linkedin</h1>
+							<span className='dark:text-white'>@link</span>
 						</div>
 					</div>
 
 					<div className='flex items-center gap-2'>
-						<SiTwitter size={40} />
+						<SiTwitter size={40} className='dark:text-white' />
 						<div>
-							<h1 className='font-semibold'>Github</h1>
-							<span>@link</span>
+							<h1 className='font-semibold dark:text-white'>Github</h1>
+							<span className='dark:text-white'>@link</span>
 						</div>
 					</div>
 				</div>

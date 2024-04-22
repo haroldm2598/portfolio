@@ -17,18 +17,12 @@ export default function MenuContainer() {
 		<AnimatePresence>
 			{isActive && (
 				<AnimateMenuEffect>
-					<motion.div
-					// className='mx-5 px-0 fixed z-10 top-[6rem] left-0 right-0 min-h-screen max-w-full md:w-[30rem] bg-whiteBlur backdrop-blur-xl rounded-lg'
-					// initial={{ opacity: 0 }}
-					// animate={{ opacity: 1 }}
-					// exit={{ opacity: 0 }}
-					// transition={{ delay: 0.3, type: 'tween', stiffness: 120 }}
-					>
+					<motion.div>
 						<ul className='px-4 py-6 flex flex-col gap-10 text-white'>
 							{navLinks?.map((item, index) => (
 								<AnimateSection key={index}>
 									<motion.li
-										className={`text-2xl text-veryDarkGray font-bold uppercase`}
+										className={`text-2xl text-veryDarkGray dark:text-white font-bold uppercase`}
 										initial={{ opacity: 0 }}
 										animate={{ opacity: 1 }}
 										transition={{ delay: 0.4, type: 'tween', stiffness: 90 }}

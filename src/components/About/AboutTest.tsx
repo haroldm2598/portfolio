@@ -16,7 +16,7 @@ export default function AboutTest() {
 			<AnimateSection>
 				<TitleSection title='about' />
 
-				<p className='max-w-[70rem] mt-5 text-[2rem] leading-[2.5rem] opacity-60'>
+				<p className='max-w-[70rem] mt-5 text-2xl lg:text-[2rem] leading-[2.5rem] opacity-80 dark:text-white'>
 					hey mike here. A dedicated front-end developer creating stunning,
 					functional website. A user-friendly web experienced who loves to
 					develope a website where analytical and problem solving provide
@@ -25,11 +25,11 @@ export default function AboutTest() {
 			</AnimateSection>
 
 			<AnimateSection>
-				<h1 className='mt-10 text-[2rem] font-semibold leading-10'>
+				<h1 className='mt-10 text-[2rem] font-semibold leading-10 dark:text-white'>
 					Here are my stacks
 				</h1>
 
-				<div className='my-10 flex flex-wrap gap-5'>
+				<div className='my-10 flex flex-wrap gap-3 lg:gap-5'>
 					{expertiseList.map((item, index) => (
 						<AnimeStaggered key={index} custom={1 + index}>
 							<div className='my-2 w-[100px] h-[100px] grid place-items-center bg-white border-2 border-[#E1E1E1] rounded-lg shadow-md'>

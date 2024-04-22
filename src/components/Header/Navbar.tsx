@@ -1,8 +1,7 @@
 'use client';
 import Link from 'next/link';
-import { FiMoon, FiSun } from 'react-icons/fi';
 import { AnimatePresence, motion } from 'framer-motion';
-import { libreBaskerville } from '@/lib/fonts';
+import { loraSoftSemibold, loraSoftMedium } from '@/lib/fonts';
 import { useAppSelector } from '@/lib/redux/store';
 
 import ButtonMenu from './Header/ButtonMenu';
@@ -33,16 +32,16 @@ export default function Navbar() {
 						animate='open'
 					>
 						<h1
-							className={`${libreBaskerville.className} text-veryDarkGray text-[2.5rem] font-bold`}
+							className={`${loraSoftSemibold.className} text-veryDarkGray dark:text-white text-[2.5rem] font-bold`}
 						>
 							RoldDev
 						</h1>
 
-						<ul className='hidden lg:flex items-center gap-10'>
+						<ul className='hidden lg:flex items-center gap-8'>
 							{navLinks.map((item, index) => {
 								return (
 									<li
-										className={`${libreBaskerville.className} text-veryDarkGray dark:text-white dark:hover:text-black text-xl font-bold uppercase cursor-pointer transition-all duration-300 ease-in-out delay-100 hover:text-gray-400`}
+										className={`${loraSoftMedium.className} text-veryDarkGray dark:text-white dark:hover:text-black text-xl uppercase cursor-pointer transition-all duration-300 ease-in-out delay-100 hover:text-gray-400`}
 										key={index}
 									>
 										<Link href={`#${item.path}`}>{item.name}</Link>
@@ -53,7 +52,10 @@ export default function Navbar() {
 							<ThemeSwitch />
 						</ul>
 
-						<ButtonMenu />
+						<div className='flex items-center gap-2 lg:hidden'>
+							<ThemeSwitch />
+							<ButtonMenu />
+						</div>
 					</motion.div>
 				</AnimatePresence>
 			</StickyHeader>

@@ -1,11 +1,13 @@
 - UI/UX (figma)
   -- change font family DONE
   -- change palatte DONE
-  -- optional dark mode
+  -- optional dark mode DONE
+  -- almost done na palitan nalng lahat ng name sa twconfig tapos yun mga overflow sa mga cards
+  -- double check nalng yun ibang cards kung applicable
 
 - Dark Mode
-  -- first using next-theme and tailwindcss
-  -- second using RTK and tailwindcss
+  -- first using next-theme and tailwindcss DONE (BEST)
+  -- second using RTK and tailwindcss (WORST)
 
 - done nako sa header section
 - - ALL MUST BE IN CENTER WHEN HAVING A above XL SCREEN

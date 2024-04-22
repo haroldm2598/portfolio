@@ -1,7 +1,11 @@
 - UI/UX (figma)
-  -- change font family
-  -- change palatte
+  -- change font family DONE
+  -- change palatte DONE
   -- optional dark mode
+
+- Dark Mode
+  -- first using next-theme and tailwindcss
+  -- second using RTK and tailwindcss
 
 - done nako sa header section
 - - ALL MUST BE IN CENTER WHEN HAVING A above XL SCREEN

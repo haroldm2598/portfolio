@@ -3,7 +3,9 @@ import type { Metadata } from 'next';
 import { montserrat } from '@/lib/fonts';
 import Navbar from '@/components/Header/Navbar';
 import Footer from '@/components/Header/Footer';
+
 import { ReduxProvider } from './StoreProvider';
+import Providers from './Providers';
 
 export const metadata: Metadata = {
 	title: 'RoldDev | Portfolio',
@@ -16,12 +18,14 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang='en'>
+		<html lang='en' suppressHydrationWarning>
 			<body className={montserrat.className}>
 				<ReduxProvider>
-					<Navbar />
-					{children}
-					<Footer />
+					<Providers>
+						<Navbar />
+						{children}
+						<Footer />
+					</Providers>
 				</ReduxProvider>
 			</body>
 		</html>

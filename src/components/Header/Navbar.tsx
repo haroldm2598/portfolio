@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import { FiMoon, FiSun } from 'react-icons/fi';
 import { AnimatePresence, motion } from 'framer-motion';
 import { libreBaskerville } from '@/lib/fonts';
 import { useAppSelector } from '@/lib/redux/store';
@@ -7,6 +8,7 @@ import { useAppSelector } from '@/lib/redux/store';
 import ButtonMenu from './Header/ButtonMenu';
 import MenuContainer from './Header/MenuContainer';
 import StickyHeader from './Header/StickyNavbar';
+import ThemeSwitch from '../ThemeSwitch';
 
 const headerAnimateVariants = {
 	initial: { opacity: 0, y: '-100%' },
@@ -36,17 +38,19 @@ export default function Navbar() {
 							RoldDev
 						</h1>
 
-						<ul className='hidden lg:flex gap-10'>
+						<ul className='hidden lg:flex items-center gap-10'>
 							{navLinks.map((item, index) => {
 								return (
 									<li
-										className={`${libreBaskerville.className} text-veryDarkGray text-xl font-bold uppercase cursor-pointer transition-all duration-300 ease-in-out delay-100 hover:text-gray-400`}
+										className={`${libreBaskerville.className} text-veryDarkGray dark:text-white dark:hover:text-black text-xl font-bold uppercase cursor-pointer transition-all duration-300 ease-in-out delay-100 hover:text-gray-400`}
 										key={index}
 									>
 										<Link href={`#${item.path}`}>{item.name}</Link>
 									</li>
 								);
 							})}
+
+							<ThemeSwitch />
 						</ul>
 
 						<ButtonMenu />

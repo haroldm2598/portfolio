@@ -2,7 +2,6 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { InitialState } from '@/lib/types/definition';
 
 const initialState: InitialState = {
-	value: '',
 	isActive: false,
 	navLinks: [
 		{ name: 'about', path: 'about' },
@@ -53,14 +52,11 @@ export const data = createSlice({
 	name: 'portfolio',
 	initialState,
 	reducers: {
-		test: (state, action: PayloadAction<string>) => {
-			state.value = action.payload;
-		},
 		SetIsActive: (state, action: PayloadAction<boolean>) => {
 			state.isActive = action.payload;
 		}
 	}
 });
 
-export const { test, SetIsActive } = data.actions;
+export const { SetIsActive } = data.actions;
 export default data.reducer;

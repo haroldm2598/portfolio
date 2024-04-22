@@ -1,5 +1,5 @@
 'use client';
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, Fragment } from 'react';
 import { motion, useAnimation, useInView } from 'framer-motion';
 
 interface AnimeStaggeredProps {
@@ -47,17 +47,13 @@ export default function AnimateParagraph({
 				aria-hidden
 			>
 				{text.split(' ').map((char, index) => (
-					<>
-						<motion.span
-							key={index}
-							variants={defaultAnimations}
-							className='inline-block'
-						>
+					<Fragment key={index}>
+						<motion.span variants={defaultAnimations} className='inline-block'>
 							{char}
 						</motion.span>
 
 						<span className='inline-block'>&nbsp;</span>
-					</>
+					</Fragment>
 				))}
 			</motion.span>
 		</p>

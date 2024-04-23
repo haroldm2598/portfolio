@@ -1,5 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { InitialState } from '@/lib/types/definition';
+import { SiGithub, SiLinkedin, SiTwitter } from 'react-icons/si';
 
 const initialState: InitialState = {
 	isActive: false,
@@ -45,6 +46,11 @@ const initialState: InitialState = {
 		{ imgSrc: require('@/assets/images/experties/nodejs.svg').default },
 		{ imgSrc: require('@/assets/images/experties/express.svg').default },
 		{ imgSrc: require('@/assets/images/experties/mongodb.svg').default }
+	],
+	socialMediaList: [
+		{ Icon: SiGithub, socmedName: 'Github', path: '@link' },
+		{ Icon: SiLinkedin, socmedName: 'Linkedin', path: '@link' },
+		{ Icon: SiTwitter, socmedName: 'Twitter', path: '@link' }
 	]
 };
 

@@ -4,6 +4,7 @@
   -- optional dark mode DONE
   -- almost done na palitan nalng lahat ng name sa twconfig tapos yun mga overflow sa mga cards
   -- double check nalng yun ibang cards kung applicable
+  -- animation ng socialmedia links
 
 - Dark Mode
   -- first using next-theme and tailwindcss DONE (BEST)

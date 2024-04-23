@@ -1,7 +1,6 @@
 'use client';
 import { useAppSelector } from '@/lib/redux/store';
 
-import AnimateImage from '../ui/Animated/AnimateImage';
 import AnimateSection from '../ui/Animated/AnimateSection';
 import TitleSection from '../TitleSection';
 import ThreeDCard from './ThreeDCard';
@@ -10,7 +9,10 @@ export default function Projects() {
 	const { projectList } = useAppSelector((state) => state.dataTemplate);
 
 	return (
-		<section id='projects' className='my-20 mx-0 lg:mx-16'>
+		<section
+			id='projects'
+			className='my-20 mx-0 lg:mx-16  2xl:max-w-[85rem] 2xl:mx-auto'
+		>
 			<AnimateSection>
 				<TitleSection title='projects' />
 			</AnimateSection>

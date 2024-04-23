@@ -28,6 +28,12 @@ export default function ThemeSwitch() {
 	}
 
 	if (resolvedTheme === 'light') {
-		return <FiMoon size={40} color='black' onClick={() => setTheme('dark')} />;
+		return (
+			<FiMoon
+				size={40}
+				className='text-veryDarkGray'
+				onClick={() => setTheme('dark')}
+			/>
+		);
 	}
 }

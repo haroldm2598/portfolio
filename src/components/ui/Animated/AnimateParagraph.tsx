@@ -46,15 +46,20 @@ export default function AnimateParagraph({
 				transition={{ staggerChildren: 0.1 }}
 				aria-hidden
 			>
-				{text.split(' ').map((char, index) => (
-					<Fragment key={index}>
-						<motion.span variants={defaultAnimations} className='inline-block'>
-							{char}
-						</motion.span>
+				{text.split(' ').map((char, index) => {
+					return (
+						<Fragment key={index}>
+							<motion.span
+								variants={defaultAnimations}
+								className='inline-block'
+							>
+								{char}
+							</motion.span>
 
-						<span className='inline-block'>&nbsp;</span>
-					</Fragment>
-				))}
+							<span className='inline-block'>&nbsp;</span>
+						</Fragment>
+					);
+				})}
 			</motion.span>
 		</p>
 	);

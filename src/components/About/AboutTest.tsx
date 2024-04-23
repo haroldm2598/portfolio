@@ -29,7 +29,7 @@ export default function AboutTest() {
 					Here are my stacks
 				</h1>
 
-				<div className='my-10 flex flex-wrap gap-3 lg:gap-5'>
+				<div className='my-10 flex flex-wrap justify-center md:justify-start gap-3 lg:gap-5'>
 					{expertiseList.map((item, index) => (
 						<AnimeStaggered key={index} custom={1 + index}>
 							<div className='my-2 w-[100px] h-[100px] grid place-items-center bg-white border-2 border-[#E1E1E1] rounded-lg shadow-md'>

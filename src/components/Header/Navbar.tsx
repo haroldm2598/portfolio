@@ -32,7 +32,7 @@ export default function Navbar() {
 						animate='open'
 					>
 						<h1
-							className={`${loraSoftSemibold.className} text-veryDarkGray dark:text-white text-[2.5rem] font-bold`}
+							className={`${loraSoftSemibold.className} text-veryDarkGray dark:text-white text-3xl lg:text-[2.5rem] font-bold`}
 						>
 							RoldDev
 						</h1>

@@ -3,7 +3,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { TbSourceCode } from 'react-icons/tb';
 import { CgWebsite } from 'react-icons/cg';
-import { CardBody, CardContainer, CardItem } from '../ui/3d-card';
+import {
+	CardBody,
+	CardContainer,
+	CardItem
+} from '../ui/AnimatedComponents/3d-card';
 import { ProjectProps } from '@/lib/types/definition';
 import AnimeStaggered from '../ui/Animated/AnimeStaggered';
 import AnimateSection from '../ui/Animated/AnimateSection';
@@ -19,8 +23,8 @@ export default function ThreeDCard({ data }: ThreeDCardProps) {
 				{data.map((item, index) => {
 					return (
 						<AnimeStaggered key={index} custom={2 + index}>
-							<CardContainer className='inter-var shadow-xl'>
-								<CardBody className='bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-full lg:w-[26rem] xl:w-[30rem] h-auto rounded-xl p-6 border '>
+							<CardContainer className='inter-var'>
+								<CardBody className='bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-full lg:w-[26rem] xl:w-[30rem] h-auto rounded-xl p-6 border shadow-lg'>
 									<CardItem translateZ='70' className='w-full mt-4'>
 										<Image
 											src={item.imageSrc}

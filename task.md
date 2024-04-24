@@ -4,8 +4,10 @@
   -- optional dark mode DONE
   -- almost done na palitan nalng lahat ng name sa twconfig tapos yun mga overflow sa mga cards
   -- double check nalng yun ibang cards kung applicable
-  -- animation ng socialmedia links
-
+  -- animation ng socialmedia links DONE
+  -- spacing ng content katulad sa navbar container kapag medium-large screen DONE
+  -- actual links for contact social media
+  -- try to implement bg contact form like in figma
 - Dark Mode
   -- first using next-theme and tailwindcss DONE (BEST)
   -- second using RTK and tailwindcss (WORST)

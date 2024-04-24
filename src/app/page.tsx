@@ -1,36 +1,27 @@
-// ORIGINAL
-// import About from '@/components/About/About';
-// import Hero from '@/components/Hero/Hero';
-// import Contact from '@/components/Contact/Contact';
-import Projects from '@/components/Project/Projects';
-
-// BETA TESTING
-import HeroTest from '@/components/Hero/HeroTest';
-import AboutTest from '@/components/About/AboutTest';
-import ContactTest from '@/components/Contact/ContactTest';
-import Wrapper from '@/components/Wrapper';
+import Wrapper from "@/components/Wrapper";
+import Hero from "@/components/Hero/Hero";
+import About from "@/components/About/About";
+import Contact from "@/components/Contact/Contact";
+import Projects from "@/components/Project/Projects";
 
 export default function page() {
-	return (
-		<div>
-			{/* <Hero /> */}
-			{/* <About /> */}
-			{/* <Contact /> */}
-			<Wrapper>
-				<HeroTest />
-			</Wrapper>
+  return (
+    <div>
+      <Wrapper>
+        <Hero />
+      </Wrapper>
 
-			<Wrapper className='bg-white dark:bg-darkMode100'>
-				<AboutTest />
-			</Wrapper>
+      <Wrapper className="bg-white dark:bg-darkMode100">
+        <About />
+      </Wrapper>
 
-			<Wrapper>
-				<Projects />
-			</Wrapper>
+      <Wrapper>
+        <Projects />
+      </Wrapper>
 
-			<Wrapper className='bg-white dark:bg-darkMode100'>
-				<ContactTest />
-			</Wrapper>
-		</div>
-	);
+      <Wrapper className="bg-white dark:bg-darkMode100">
+        <Contact />
+      </Wrapper>
+    </div>
+  );
 }

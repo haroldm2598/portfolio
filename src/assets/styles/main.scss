@@ -9,23 +9,51 @@ $main--color400: #e5e5e5;
 $main--color500: #ffffff;
 
 @layer base {
-	body {
-		@apply bg-lightMode dark:bg-darkMode overflow-x-hidden;
-	}
+  body {
+    @apply overflow-x-hidden bg-lightMode dark:bg-darkMode;
+  }
+}
+
+@layer component {
+  .btnMenu {
+    @apply h-[60px] w-[60px] cursor-pointer rounded-[50%] transition-all duration-[0.2s] ease-in-out;
+
+    &:hover {
+      @apply bg-blue-300 dark:bg-slate-300;
+    }
+  }
+
+  .btnBurger {
+    @apply w-full;
+
+    &::after,
+    &::before {
+      @apply relative mx-auto my-0 block h-[3px] w-[50%] bg-black  transition-transform duration-[0.3s] content-[""] dark:bg-white;
+    }
+
+    &::after {
+      @apply top-[-5px];
+    }
+
+    &::before {
+      @apply top-[5px];
+    }
+  }
+}
+
+.btnBurgerActive {
+  &::after {
+    transform: rotate(45deg);
+    top: 0;
+  }
+
+  &::before {
+    transform: rotate(-45deg);
+    top: 2px;
+  }
 }
 
 html,
 body {
-	scroll-behavior: smooth;
-}
-body {
-	// background: rgb(0, 0, 0);
-	// background: linear-gradient(
-	// 	90deg,
-	// 	rgba(20, 33, 61, 1) 0%,
-	// 	rgba(12, 15, 21, 1) 60%,
-	// 	rgba(0, 0, 0, 1) 100%
-	// );
-	// background-color: #fafafa;
-	// overflow-x: hidden;
+  scroll-behavior: smooth;
 }

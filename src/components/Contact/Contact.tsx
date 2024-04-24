@@ -1,17 +1,36 @@
-import AnimateSection from '../ui/Animated/AnimateSection';
-import TitleSection from '../TitleSection';
-import FormMailer from './FormMailer';
+"use client";
+import { useAppSelector } from "@/lib/redux/store";
+import AnimateSection from "../ui/Animated/AnimateSection";
+
+import TitleSection from "../TitleSection";
+import SubTitle from "../SubTitle";
+import FormMailer from "./FormMailer";
+import MediaLinks from "./MediaLinks";
 
 export default function Contact() {
-	return (
-		<section id='contact' className='my-20 mx-0 lg:mx-16 lg:h-full'>
-			<AnimateSection>
-				<TitleSection title='get in touch' />
-			</AnimateSection>
+  const { socialMediaList } = useAppSelector((state) => state.dataTemplate);
 
-			<AnimateSection>
-				<FormMailer />
-			</AnimateSection>
-		</section>
-	);
+  return (
+    <section
+      id="contact"
+      className="mx-0 my-20 lg:mx-auto lg:h-full lg:max-w-[85rem] lg:px-6"
+    >
+      <AnimateSection>
+        <TitleSection title="Contact" />
+      </AnimateSection>
+
+      <div className="flex flex-col items-center gap-10 lg:flex-row lg:gap-0">
+        <div className="flex flex-1 flex-wrap gap-10 lg:flex-col">
+          <MediaLinks data={socialMediaList} />
+        </div>
+
+        <div className="flex-1">
+          <AnimateSection>
+            <SubTitle title="Get in touch" />
+            <FormMailer />
+          </AnimateSection>
+        </div>
+      </div>
+    </section>
+  );
 }

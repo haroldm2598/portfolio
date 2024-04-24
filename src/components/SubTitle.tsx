@@ -1,11 +1,15 @@
-import { loraSoftMedium } from '@/lib/fonts';
+import { loraSoftMedium } from "@/lib/fonts";
+import { cn } from "@/utils/cn";
 
 export default function SubTitle({ title }: { title: string }) {
-	return (
-		<h1
-			className={`${loraSoftMedium.className} mb-4 text-veryDarkGray dark:text-darkModeBlue text-4xl opacity-70`}
-		>
-			{title}
-		</h1>
-	);
+  return (
+    <h1
+      className={cn(
+        "mb-4 text-4xl text-veryDarkGray opacity-70 dark:text-darkModeBlue",
+        loraSoftMedium.className,
+      )}
+    >
+      {title}
+    </h1>
+  );
 }

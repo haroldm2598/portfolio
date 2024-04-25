@@ -11,7 +11,7 @@ export default function AboutTest() {
   return (
     <section
       id="about"
-      className="mx-0 min-h-screen py-20 text-veryDarkGray lg:mx-auto lg:max-w-[85rem] lg:px-6"
+      className="mx-0 min-h-screen py-4 text-veryDarkGray lg:mx-auto lg:max-w-[85rem] lg:px-6"
     >
       <AnimateSection>
         <TitleSection title="about" />

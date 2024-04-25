@@ -5,5 +5,5 @@ type WrapperProps = {
   className?: string;
 };
 export default function Wrapper({ children, className }: WrapperProps) {
-  return <div className={cn("p-5 lg:p-10", className)}>{children}</div>;
+  return <div className={cn("p-5", className)}>{children}</div>;
 }

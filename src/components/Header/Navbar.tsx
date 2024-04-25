@@ -46,7 +46,7 @@ export default function Navbar() {
                 return (
                   <li
                     className={cn(
-                      "cursor-pointer text-xl uppercase text-veryDarkGray transition-all delay-100 duration-300 ease-in-out hover:text-gray-400 dark:text-white dark:hover:text-black",
+                      "relative cursor-pointer text-xl uppercase text-veryDarkGray transition-all delay-100 duration-300 ease-in-out after:absolute after:block after:h-[3px]  after:w-full after:origin-left after:scale-x-0 after:bg-veryBlue after:transition after:duration-300 after:content-[''] hover:text-gray-400 after:hover:scale-x-100 dark:text-white dark:hover:text-veryBlue",
                       loraSoftMedium.className,
                     )}
                     key={index}

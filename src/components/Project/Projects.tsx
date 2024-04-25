@@ -11,7 +11,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="mx-0 my-20 lg:mx-auto lg:max-w-[85rem] lg:px-6"
+      className="mx-0 my-4 lg:mx-auto lg:max-w-[85rem] lg:px-6"
     >
       <AnimateSection>
         <TitleSection title="projects" />

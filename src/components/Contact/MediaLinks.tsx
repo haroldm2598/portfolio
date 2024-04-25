@@ -11,7 +11,7 @@ export default function MediaLinks({ data }: TSProps) {
       {data.map((socialItem, index) => {
         const { Icon, socmedName, path } = socialItem;
         return (
-          <AnimeStaggered key={index} custom={1 + index}>
+          <AnimeStaggered key={index} custom={2 + index}>
             <div className="flex items-center gap-2">
               <Icon size={40} className="dark:text-white" />
               <div>

@@ -1,28 +1,42 @@
-'use client';
+import { IoDocument, IoPaperPlane } from "react-icons/io5";
+import Button from "./Button";
 
-import AnimateParagraph from '../ui/Animated/AnimateParagraph';
-import { SparklesCore } from '../ui/AnimatedComponents/Sparkles';
+import { SparklesCore } from "../ui/AnimatedComponents/Sparkles";
+import AnimateParagraph from "../ui/Animated/AnimateParagraph";
+import AnimateSection from "../ui/Animated/AnimateSection";
 
 export default function HeroTest() {
-	return (
-		<section className='relative h-96 lg:min-h-screen my-20 lg:my-16 lg:mx-16 flex flex-col lg:flex-row justify-center items-center'>
-			<div>
-				<div className='w-full absolute inset-0  h-96 lg:h-screen'>
-					<SparklesCore
-						background='transparent'
-						minSize={0.6}
-						maxSize={1.4}
-						particleDensity={100}
-						className='w-full h-full'
-						particleColor='#219ebc'
-					/>
-				</div>
-				<AnimateParagraph
-					className='w-full lg:max-w-5xl text-center text-veryDarkGray dark:text-greyWhite text-[2.5rem] leading-10 lg:text-[4rem] lg:leading-[4.875rem] font-bold'
-					text='A front-end developer bringing your ideas into life.'
-					once={true}
-				/>
-			</div>
-		</section>
-	);
+  return (
+    <section className="relative flex h-[48rem] items-center justify-center lg:mx-16 lg:min-h-screen">
+      <div>
+        <div className="absolute inset-0 z-0 h-full w-full">
+          <SparklesCore
+            background="transparent"
+            minSize={0.6}
+            maxSize={1.4}
+            particleDensity={100}
+            className="h-full w-full"
+            particleColor="#219ebc"
+          />
+        </div>
+
+        <AnimateParagraph
+          className="w-full text-center text-[2.5rem] font-bold leading-10 text-veryDarkGray dark:text-greyWhite lg:max-w-5xl lg:text-[4rem] lg:leading-[4.875rem]"
+          text="A front-end developer bringing your ideas into life."
+          once={true}
+        />
+
+        <AnimateSection>
+          <div className="relative z-20 mt-5 flex flex-wrap justify-center gap-4">
+            <Button name="Download CV">
+              <IoDocument className="text-white" />
+            </Button>
+            <Button name="Hire Me">
+              <IoPaperPlane className="text-white" />
+            </Button>
+          </div>
+        </AnimateSection>
+      </div>
+    </section>
+  );
 }

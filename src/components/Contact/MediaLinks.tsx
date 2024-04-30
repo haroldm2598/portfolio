@@ -1,5 +1,5 @@
 import { MediaLinksProps } from "@/lib/types/definition";
-import AnimeStaggered from "../ui/Animated/AnimeStaggered";
+import AnimeStaggered from "../ui/Animated/AnimateStagger";
 
 interface TSProps {
   data: Array<MediaLinksProps>;

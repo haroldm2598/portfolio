@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useAppSelector } from "@/lib/redux/store";
 import AnimateSection from "../ui/Animated/AnimateSection";
-import AnimeStaggered from "../ui/Animated/AnimeStaggered";
+import AnimateStagger from "../ui/Animated/AnimateStagger";
 import TitleSection from "../TitleSection";
 
 export default function AboutTest() {
@@ -31,7 +31,7 @@ export default function AboutTest() {
 
         <div className="my-10 flex flex-wrap justify-center gap-3 md:justify-start lg:gap-5">
           {expertiseList.map((item, index) => (
-            <AnimeStaggered key={index} custom={1 + index}>
+            <AnimateStagger key={index} custom={1 + index}>
               <div className="my-2 grid h-[100px] w-[100px] place-items-center rounded-lg border-2 border-[#E1E1E1] bg-white shadow-md">
                 <div className="h-[40px] w-[40px] lg:h-[60px] lg:w-[60px]">
                   <Image
@@ -41,7 +41,7 @@ export default function AboutTest() {
                   />
                 </div>
               </div>
-            </AnimeStaggered>
+            </AnimateStagger>
           ))}
         </div>
       </AnimateSection>

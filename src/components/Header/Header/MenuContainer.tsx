@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import AnimateSection from "@/components/ui/Animated/AnimateSection";
-import AnimateMenuEffect from "@/components/ui/Animated/AnimateMenuEffect";
+import AnimateMenu from "@/components/ui/Animated/AnimateMenu";
 
 // RTK LIB
 import { useDispatch } from "react-redux";
@@ -16,7 +16,7 @@ export default function MenuContainer() {
   return (
     <AnimatePresence>
       {isActive && (
-        <AnimateMenuEffect>
+        <AnimateMenu>
           <motion.div>
             <ul className="flex flex-col gap-10 px-4 py-6 text-white">
               {navLinks?.map((item, index) => (
@@ -38,7 +38,7 @@ export default function MenuContainer() {
               ))}
             </ul>
           </motion.div>
-        </AnimateMenuEffect>
+        </AnimateMenu>
       )}
     </AnimatePresence>
   );

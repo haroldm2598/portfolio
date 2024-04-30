@@ -3,7 +3,8 @@ import Button from "./Button";
 
 import { SparklesCore } from "../ui/AnimatedComponents/Sparkles";
 import AnimateParagraph from "../ui/Animated/AnimateParagraph";
-import AnimateSection from "../ui/Animated/AnimateSection";
+// import AnimateSection from "../ui/Animated/AnimateSection";
+import TestAnimateSection from "../ui/Animated/TestAnimated/TestAnimateSection";
 
 export default function HeroTest() {
   return (
@@ -26,7 +27,7 @@ export default function HeroTest() {
           once={true}
         />
 
-        <AnimateSection>
+        <TestAnimateSection once={false}>
           <div className="relative z-20 mt-5 flex flex-wrap justify-center gap-4">
             <Button name="Download CV">
               <IoDocument className="text-white" />
@@ -35,7 +36,7 @@ export default function HeroTest() {
               <IoPaperPlane className="text-white" />
             </Button>
           </div>
-        </AnimateSection>
+        </TestAnimateSection>
       </div>
     </section>
   );

@@ -6,7 +6,7 @@ import { useAppSelector } from "@/lib/redux/store";
 
 import ButtonMenu from "./Header/ButtonMenu";
 import MenuContainer from "./Header/MenuContainer";
-import StickyNavbar from "./Header/StickyNavbar";
+import StickyHeader from "./Header/StickyHeader";
 import ThemeSwitch from "../ThemeSwitch";
 import { cn } from "@/utils/cn";
 
@@ -24,7 +24,7 @@ export default function Navbar() {
 
   return (
     <>
-      <StickyNavbar>
+      <StickyHeader>
         <AnimatePresence>
           <motion.div
             className="relative flex items-center justify-between text-white lg:flex-row"
@@ -65,7 +65,7 @@ export default function Navbar() {
             </div>
           </motion.div>
         </AnimatePresence>
-      </StickyNavbar>
+      </StickyHeader>
 
       <MenuContainer />
     </>

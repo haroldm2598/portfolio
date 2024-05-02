@@ -11,7 +11,8 @@
 - Dark Mode
   -- first using next-theme and tailwindcss DONE (BEST)
   -- second using RTK and tailwindcss (WORST)
-  -- change delay and duration for animateSection should smooth and timing for scrolling
+  -- change delay and duration for animateSection should smooth and timing for scrolling DONE
+  -- nag lalag dahil sa particles sa hero section
 
 - done nako sa header section
 - - ALL MUST BE IN CENTER WHEN HAVING A above XL SCREEN

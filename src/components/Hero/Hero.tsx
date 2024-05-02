@@ -3,8 +3,7 @@ import Button from "./Button";
 
 import { SparklesCore } from "../ui/AnimatedComponents/Sparkles";
 import AnimateParagraph from "../ui/Animated/AnimateParagraph";
-// import AnimateSection from "../ui/Animated/AnimateSection";
-import TestAnimateSection from "../ui/Animated/TestAnimated/TestAnimateSection";
+import AnimateSection from "../ui/Animated/AnimateSection";
 
 export default function HeroTest() {
   return (
@@ -13,8 +12,8 @@ export default function HeroTest() {
         <div className="absolute inset-0 z-0 h-full w-full">
           <SparklesCore
             background="transparent"
-            minSize={0.6}
-            maxSize={1.4}
+            minSize={0.2}
+            maxSize={1}
             particleDensity={100}
             className="h-full w-full"
             particleColor="#219ebc"
@@ -27,7 +26,7 @@ export default function HeroTest() {
           once={true}
         />
 
-        <TestAnimateSection once={false}>
+        <AnimateSection customDelay={2}>
           <div className="relative z-20 mt-5 flex flex-wrap justify-center gap-4">
             <Button name="Download CV">
               <IoDocument className="text-white" />
@@ -36,7 +35,7 @@ export default function HeroTest() {
               <IoPaperPlane className="text-white" />
             </Button>
           </div>
-        </TestAnimateSection>
+        </AnimateSection>
       </div>
     </section>
   );

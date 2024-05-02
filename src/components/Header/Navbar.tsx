@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { loraSoftSemibold, loraSoftMedium } from "@/lib/fonts";
 import { useAppSelector } from "@/lib/redux/store";
 
-import ButtonMenu from "./Header/ButtonMenu";
+import MenuButton from "./Header/MenuButton";
 import MenuContainer from "./Header/MenuContainer";
 import StickyHeader from "./Header/StickyHeader";
 import ThemeSwitch from "../ThemeSwitch";
@@ -61,7 +61,7 @@ export default function Navbar() {
 
             <div className="flex items-center gap-2 lg:hidden">
               <ThemeSwitch />
-              <ButtonMenu />
+              <MenuButton />
             </div>
           </motion.div>
         </AnimatePresence>

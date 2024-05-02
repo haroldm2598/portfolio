@@ -25,7 +25,7 @@ export default function Contact() {
         </div>
 
         <div className="flex-1">
-          <AnimateSection>
+          <AnimateSection customDelay={2}>
             <SubTitle title="Get in touch" />
             <FormMailer />
           </AnimateSection>

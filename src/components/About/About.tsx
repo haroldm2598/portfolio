@@ -15,7 +15,9 @@ export default function AboutTest() {
     >
       <AnimateSection>
         <TitleSection title="about" />
+      </AnimateSection>
 
+      <AnimateSection customDelay={2}>
         <p className="mt-5 max-w-[70rem] text-lg leading-8 opacity-80 dark:text-white lg:text-2xl lg:leading-10">
           hey mike here. A dedicated front-end developer creating stunning,
           functional website. A user-friendly web experienced who loves to
@@ -24,15 +26,17 @@ export default function AboutTest() {
         </p>
       </AnimateSection>
 
-      <AnimateSection>
+      <AnimateSection customDelay={3}>
         <h1 className="mt-10 text-[2rem] font-semibold leading-10 dark:text-white">
           Here are my stacks
         </h1>
-
         <div className="my-10 flex flex-wrap justify-center gap-3 md:justify-start lg:gap-5">
           {expertiseList.map((item, index) => (
-            <AnimateStagger key={index} custom={1 + index}>
-              <div className="my-2 grid h-[100px] w-[100px] place-items-center rounded-lg border-2 border-[#E1E1E1] bg-white shadow-md">
+            <AnimateStagger key={index} custom={index}>
+              <div
+                key={index}
+                className="my-2 grid h-[100px] w-[100px] place-items-center rounded-lg border-2 border-[#E1E1E1] bg-white shadow-md"
+              >
                 <div className="h-[40px] w-[40px] lg:h-[60px] lg:w-[60px]">
                   <Image
                     src={item.imgSrc}

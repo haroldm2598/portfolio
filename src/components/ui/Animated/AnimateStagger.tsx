@@ -25,32 +25,26 @@ const containerVars = {
 
 const mobileLinkVars = {
   initial: {
-    y: "100vh",
-    transition: {
-      duration: 0.5,
-      delay: 0.5,
-      ease: [0.37, 0, 0.63, 1],
-    },
+    y: 500,
+    opacity: 0,
   },
   open: (custom: number) => ({
     y: 0,
+    opacity: 1,
     transition: {
       ease: [0, 0.55, 0.45, 1],
-      duration: 0.5,
-      delay: 0.2 * custom,
+      duration: 0.75,
+      delay: 0.25 * custom,
     },
   }),
 };
 
-interface AnimeStaggeredProps {
+interface AnimateProps {
   children: React.ReactNode;
   custom: number;
 }
 
-export default function AnimeStaggered({
-  children,
-  custom,
-}: AnimeStaggeredProps) {
+export default function AnimeStaggered({ children, custom }: AnimateProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const inViewControl = useAnimation();

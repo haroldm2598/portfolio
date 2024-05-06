@@ -4,7 +4,7 @@ import AnimateSection from "../ui/Animated/AnimateSection";
 
 import TitleSection from "../TitleSection";
 import SubTitle from "../SubTitle";
-import FormMailer from "./FormMailer";
+import Form from "./Form";
 import MediaLinks from "./MediaLinks";
 
 export default function Contact() {
@@ -27,7 +27,7 @@ export default function Contact() {
         <div className="flex-1">
           <AnimateSection customDelay={2}>
             <SubTitle title="Get in touch" />
-            <FormMailer />
+            <Form />
           </AnimateSection>
         </div>
       </div>

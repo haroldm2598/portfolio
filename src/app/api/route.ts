@@ -1,20 +1,6 @@
-import { mailOptions, transporter } from "@/config/nodemailer";
-import type { NextApiRequest, NextApiResponse } from "next";
-
-type ResponseData = {
-  message?: string | any;
-  success?: boolean;
-};
-
-type EmailProps = {
-  name?: string;
-  email?: string;
-  message?: string;
-};
-
-type Entries<T> = {
-  [K in keyof T]: [K, T[K]];
-}[keyof T][];
+import { transporter, mailOptions } from "@/config/nodezoho";
+import { Entries, FormProps } from "@/lib/types/definition";
+import { NextResponse } from "next/server";
 
 const CONTACT_MESSAGE_FIELDS: any = {
   name: "Name",
@@ -22,7 +8,7 @@ const CONTACT_MESSAGE_FIELDS: any = {
   message: "Message",
 };
 
-const generateEmailContent = (data: EmailProps) => {
+const generateEmailContent = (data: FormProps) => {
   const stringData = Object.entries(data as Entries<typeof data>).reduce(
     (str, [key, val]) => {
       return (str += `${CONTACT_MESSAGE_FIELDS[key]}: \n${val} \n \n`);
@@ -43,28 +29,20 @@ const generateEmailContent = (data: EmailProps) => {
   };
 };
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<ResponseData>,
-) {
-  if (req.method === "POST") {
-    const data = req.body;
+export async function POST(request: Request) {
+  try {
+    const { name, email, message } = await request.json();
 
-    if (!data.name || !data.email || !data.message) {
-      return res.status(400).json({ message: "Bad Request" });
-    }
+    await transporter.sendMail({
+      ...mailOptions,
+      ...generateEmailContent({ name, email, message }),
+    });
 
-    try {
-      await transporter.sendMail({
-        ...mailOptions,
-        ...generateEmailContent(data),
-      });
-
-      return res.status(200).json({ success: true });
-    } catch (err) {
-      return res.status(400).json({ message: err });
-    }
+    return NextResponse.json(
+      { message: "Sent message succeed." },
+      { status: 200 },
+    );
+  } catch (error) {
+    return new NextResponse("Failed to send message.", { status: 500 });
   }
-
-  return res.status(400).json({ message: "uu api to" });
 }

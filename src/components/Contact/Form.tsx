@@ -100,7 +100,7 @@ export default function FormMailer() {
         )}
 
         <button
-          className="btn w-full rounded-lg bg-veryBlue uppercase text-white hover:bg-black dark:border-none dark:hover:bg-blue-400"
+          className="bg-blue100 btn w-full rounded-lg uppercase text-white hover:bg-black dark:border-none dark:hover:bg-blue-400"
           disabled={!isDirty || !isValid}
         >
           submit

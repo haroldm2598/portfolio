@@ -1,5 +1,5 @@
 "use client";
-import { useRef, useEffect, Fragment } from "react";
+import { useRef, useEffect } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 
 interface AnimeStaggeredProps {

@@ -34,7 +34,7 @@ export default function Navbar() {
           >
             <h1
               className={cn(
-                "text-3xl font-bold text-veryDarkGray dark:text-white lg:text-[2.5rem]",
+                "text-grey100 text-3xl font-bold dark:text-white lg:text-[2.5rem]",
                 loraSoftSemibold.className,
               )}
             >
@@ -46,7 +46,7 @@ export default function Navbar() {
                 return (
                   <li
                     className={cn(
-                      "relative cursor-pointer text-xl uppercase text-veryDarkGray transition-all delay-100 duration-300 ease-in-out after:absolute after:block after:h-[3px]  after:w-full after:origin-left after:scale-x-0 after:bg-veryBlue after:transition after:duration-300 after:content-[''] hover:text-gray-400 after:hover:scale-x-100 dark:text-white dark:hover:text-veryBlue",
+                      "text-grey100 dark:hover:text-blue100 after:bg-blue100 relative cursor-pointer text-xl uppercase transition-all delay-100 duration-300 ease-in-out after:absolute  after:block after:h-[3px] after:w-full after:origin-left after:scale-x-0 after:transition after:duration-300 after:content-[''] hover:text-gray-400 after:hover:scale-x-100 dark:text-white",
                       loraSoftMedium.className,
                     )}
                     key={index}

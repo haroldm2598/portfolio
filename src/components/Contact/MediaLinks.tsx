@@ -1,11 +1,11 @@
 import { MediaLinksProps } from "@/lib/types/definition";
 import AnimeStaggered from "../ui/Animated/AnimateStagger";
 
-interface TSProps {
+interface MediaProps {
   data: Array<MediaLinksProps>;
 }
 
-export default function MediaLinks({ data }: TSProps) {
+export default function MediaLinks({ data }: MediaProps) {
   return (
     <>
       {data.map((socialItem, index) => {

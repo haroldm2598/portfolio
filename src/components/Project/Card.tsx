@@ -8,13 +8,9 @@ import {
   CardContainer,
   CardItem,
 } from "../ui/AnimatedComponents/3d-card";
-import { ProjectProps } from "@/lib/types/definition";
+import { ThreeDCardProps } from "@/lib/types/definition";
 import AnimeStaggered from "../ui/Animated/AnimateStagger";
 import AnimateSection from "../ui/Animated/AnimateSection";
-
-interface ThreeDCardProps {
-  data: Array<ProjectProps>;
-}
 
 export default function Card({ data }: ThreeDCardProps) {
   return (
@@ -53,7 +49,7 @@ export default function Card({ data }: ThreeDCardProps) {
                     <CardItem
                       translateZ="30"
                       as="button"
-                      className="flex items-center gap-2 rounded-xl border-2 border-darkBlue bg-white px-4 py-2 text-sm font-bold text-black dark:bg-white dark:text-black  [&>*:nth-child(odd)]:duration-200 [&>*:nth-child(odd)]:hover:translate-x-1"
+                      className="border-blue100 flex items-center gap-2 rounded-xl border-2 bg-white px-4 py-2 text-sm font-bold text-black dark:bg-white dark:text-black  [&>*:nth-child(odd)]:duration-200 [&>*:nth-child(odd)]:hover:translate-x-1"
                     >
                       <Link href={item.githubLink}>source code</Link>
                       <TbSourceCode size={16} />
@@ -61,7 +57,7 @@ export default function Card({ data }: ThreeDCardProps) {
                     <CardItem
                       translateZ="30"
                       as="button"
-                      className="flex items-center gap-2 rounded-xl bg-darkBlue px-4 py-2 text-sm font-bold text-white dark:bg-white dark:text-black [&>*:nth-child(odd)]:duration-200 [&>*:nth-child(odd)]:hover:translate-x-1"
+                      className="bg-blue100 flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-bold text-white dark:bg-white dark:text-black [&>*:nth-child(odd)]:duration-200 [&>*:nth-child(odd)]:hover:translate-x-1"
                     >
                       <Link href={item.livePreviewLink}>live preview</Link>
                       <span>

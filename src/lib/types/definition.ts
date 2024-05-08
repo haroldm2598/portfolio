@@ -1,5 +1,11 @@
 import { StaticImageData } from "next/image";
+import { ReactNode } from "react";
 import { IconType } from "react-icons";
+
+export type WrapperProps = {
+  children: ReactNode;
+  className?: string;
+};
 
 export interface InitialState {
   isActive: boolean;
@@ -12,6 +18,15 @@ export interface InitialState {
 interface NavLinksProps {
   name: string;
   path: string;
+}
+
+export interface ButtonProps {
+  name: string;
+  children: ReactNode;
+}
+
+export interface ThreeDCardProps {
+  data: Array<ProjectProps>;
 }
 
 export interface MediaLinksProps {

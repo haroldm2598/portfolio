@@ -21,7 +21,7 @@ export default function HeroTest() {
         </div>
 
         <AnimateParagraph
-          className="w-full text-center text-[2.5rem] font-bold leading-10 text-veryDarkGray dark:text-greyWhite lg:max-w-5xl lg:text-[4rem] lg:leading-[4.875rem]"
+          className="text-grey100 dark:text-white100 w-full text-center text-[2.5rem] font-bold leading-10 lg:max-w-5xl lg:text-[4rem] lg:leading-[4.875rem]"
           text="A front-end developer bringing your ideas into life."
           once={true}
         />

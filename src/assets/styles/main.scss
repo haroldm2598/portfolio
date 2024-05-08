@@ -10,7 +10,7 @@ $main--color500: #ffffff;
 
 @layer base {
   body {
-    @apply overflow-x-hidden bg-lightMode dark:bg-darkMode;
+    @apply dark:bg-black200 bg-white200 overflow-x-hidden;
   }
 }
 
@@ -28,7 +28,7 @@ $main--color500: #ffffff;
 
     &::after,
     &::before {
-      @apply relative mx-auto my-0 block h-[3px] w-[50%] bg-black  transition-transform duration-[0.3s] content-[""] dark:bg-white;
+      @apply relative mx-auto my-0 block h-[3px] w-[50%] bg-black transition-transform duration-[0.3s] content-[""] dark:bg-white;
     }
 
     &::after {

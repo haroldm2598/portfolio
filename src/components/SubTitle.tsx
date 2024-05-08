@@ -5,7 +5,7 @@ export default function SubTitle({ title }: { title: string }) {
   return (
     <h1
       className={cn(
-        "mb-4 text-4xl text-veryDarkGray opacity-70 dark:text-darkModeBlue",
+        "text-grey100 dark:text-blue200 mb-4 text-4xl opacity-70",
         loraSoftMedium.className,
       )}
     >

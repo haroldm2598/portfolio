@@ -11,7 +11,7 @@ export default function page() {
         <Hero />
       </Wrapper>
 
-      <Wrapper className="bg-white dark:bg-darkMode100">
+      <Wrapper className="dark:bg-black100 bg-white">
         <About />
       </Wrapper>
 
@@ -19,7 +19,7 @@ export default function page() {
         <Projects />
       </Wrapper>
 
-      <Wrapper className="bg-white dark:bg-darkMode100">
+      <Wrapper className="dark:bg-black100 bg-white">
         <Contact />
       </Wrapper>
     </div>

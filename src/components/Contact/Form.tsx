@@ -56,7 +56,7 @@ export default function FormMailer() {
 
   return (
     <>
-      <ToastContainer
+      {/* <ToastContainer
         position="top-right"
         autoClose={3000}
         hideProgressBar={false}
@@ -68,7 +68,7 @@ export default function FormMailer() {
         pauseOnHover
         theme="light"
         transition={Bounce}
-      />
+      /> */}
       <form
         className="mx-auto mb-10 max-w-[40rem] [&>*]:mb-4"
         onSubmit={handleSubmit(sendEmail)}
@@ -100,7 +100,7 @@ export default function FormMailer() {
         )}
 
         <button
-          className="bg-blue100 btn w-full rounded-lg uppercase text-white hover:bg-black dark:border-none dark:hover:bg-blue-400"
+          className="btn w-full rounded-lg bg-blue100 uppercase text-white hover:bg-black dark:border-none dark:hover:bg-blue-400"
           disabled={!isDirty || !isValid}
         >
           submit

@@ -14,7 +14,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="mx-0 my-4 lg:mx-auto lg:h-full lg:max-w-[85rem] lg:px-6"
+      className="relative mx-0 my-4 lg:mx-auto lg:h-full lg:max-w-[85rem] lg:px-6"
     >
       <ToastContainer
         position="top-right"
@@ -29,19 +29,16 @@ export default function Contact() {
         theme="light"
         transition={Bounce}
       />
+      <AnimateSection>
+        <TitleSection title="Contact" />
+      </AnimateSection>
 
-      <div className="grid gap-10 lg:grid-cols-2 lg:gap-0">
-        <div className="flex flex-col gap-10">
-          <AnimateSection>
-            <TitleSection title="Contact" />
-          </AnimateSection>
-
-          <div className="flex flex-wrap gap-10 lg:flex-col">
-            <MediaLinks data={socialMediaList} />
-          </div>
+      <div className="flex flex-col items-center gap-10 lg:flex-row lg:gap-0">
+        <div className="flex flex-1 flex-wrap gap-10 lg:flex-col">
+          <MediaLinks data={socialMediaList} />
         </div>
 
-        <div className="lg:bg-blackBlur rounded-lg bg-none lg:px-4 lg:py-10">
+        <div className="flex-1">
           <AnimateSection customDelay={2}>
             <SubTitle title="Get in touch" />
             <Form />

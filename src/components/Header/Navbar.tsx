@@ -34,19 +34,19 @@ export default function Navbar() {
           >
             <h1
               className={cn(
-                "text-grey100 text-3xl font-bold dark:text-white lg:text-[2.5rem]",
+                "text-3xl font-bold text-grey100 dark:text-white lg:text-[2.5rem]",
                 loraSoftSemibold.className,
               )}
             >
               RoldDev
             </h1>
-
+            {/* */}
             <ul className="hidden items-center gap-8 lg:flex">
               {navLinks.map((item, index) => {
                 return (
                   <li
                     className={cn(
-                      "text-grey100 dark:hover:text-blue100 after:bg-blue100 relative cursor-pointer text-xl uppercase transition-all delay-100 duration-300 ease-in-out after:absolute  after:block after:h-[3px] after:w-full after:origin-left after:scale-x-0 after:transition after:duration-300 after:content-[''] hover:text-gray-400 after:hover:scale-x-100 dark:text-white",
+                      "relative cursor-pointer text-xl uppercase text-grey100 transition-all delay-100 duration-300 ease-in-out after:absolute after:block after:h-[3px]  after:w-full after:origin-left after:scale-x-0 after:bg-gray-400 after:transition after:duration-300 after:content-[''] hover:text-gray-400 after:hover:scale-x-100 dark:text-white dark:after:bg-blue100 dark:hover:text-blue100",
                       loraSoftMedium.className,
                     )}
                     key={index}

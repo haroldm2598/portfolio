@@ -19,7 +19,7 @@ export default function AboutTest() {
 
       <AnimateSection customDelay={2}>
         <p className="mt-5 max-w-[70rem] text-lg leading-8 opacity-80 dark:text-white lg:text-2xl lg:leading-10">
-          hey mike here. A dedicated front-end developer creating stunning,
+          hey harold mag-isa here. A dedicated front-end developer creating stunning,
           functional website. A user-friendly web experienced who loves to
           develope a website where analytical and problem solving provide
           solutions to your needs.

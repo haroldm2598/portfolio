@@ -13,7 +13,7 @@ const initialState: InitialState = {
     {
       imageSrc: require("/public/images/projects/todolist.png").default,
       title: "Todolist",
-      desc: "Provide the essitial tasks todo things and record on the spot and friendly user",
+      desc: "Provide the essitial tasks todo and record on the spot and friendly user",
       githubLink: "https://github.com/haroldm2598/Project-todolist",
       livePreviewLink: "https://haroldm2598.github.io/Project-todolist/",
     },
@@ -27,7 +27,7 @@ const initialState: InitialState = {
     {
       imageSrc: require("/public/images/projects/ecommerce.png").default,
       title: "Ecommerce",
-      desc: "A reliable and friendly user ecommerce website. Where use an easy use of it!!",
+      desc: "A reliable and friendly user ecommerce website.",
       githubLink: "https://github.com/haroldm2598/Project-ecommerce",
       livePreviewLink: "https://haroldm2598.github.io/Project-ecommerce/",
     },

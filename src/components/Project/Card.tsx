@@ -20,7 +20,7 @@ export default function Card({ data }: ThreeDCardProps) {
           return (
             <AnimeStaggered key={index} custom={2 + index}>
               <CardContainer className="inter-var">
-                <CardBody className="group/card relative h-auto w-auto rounded-xl border border-black/[0.1] bg-gray-50 p-6 shadow-lg dark:border-white/[0.2] dark:bg-black dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] sm:w-full lg:w-[26rem] xl:w-[30rem]">
+                <CardBody className="group/card relative h-auto w-auto rounded-xl border border-black/[0.1] bg-gray-50 p-6 shadow-lg dark:border-white/[0.2] dark:bg-black dark:hover:shadow-2xl dark:hover:shadow-[#caf0f8]/[0.1] sm:w-full lg:w-[26rem] xl:w-[30rem]">
                   <CardItem translateZ="70" className="mt-4 w-full">
                     <Image
                       src={item.imageSrc}
@@ -49,7 +49,7 @@ export default function Card({ data }: ThreeDCardProps) {
                     <CardItem
                       translateZ="30"
                       as="button"
-                      className="border-blue100 flex items-center gap-2 rounded-xl border-2 bg-white px-4 py-2 text-sm font-bold text-black dark:bg-white dark:text-black  [&>*:nth-child(odd)]:duration-200 [&>*:nth-child(odd)]:hover:translate-x-1"
+                      className="flex items-center gap-2 rounded-xl border-2 border-blue100 bg-white px-4 py-2 text-sm font-bold text-black dark:bg-white dark:text-black  [&>*:nth-child(odd)]:duration-200 [&>*:nth-child(odd)]:hover:translate-x-1"
                     >
                       <Link href={item.githubLink}>source code</Link>
                       <TbSourceCode size={16} />
@@ -57,7 +57,7 @@ export default function Card({ data }: ThreeDCardProps) {
                     <CardItem
                       translateZ="30"
                       as="button"
-                      className="bg-blue100 flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-bold text-white dark:bg-white dark:text-black [&>*:nth-child(odd)]:duration-200 [&>*:nth-child(odd)]:hover:translate-x-1"
+                      className="flex items-center gap-2 rounded-xl bg-blue100 px-4 py-2 text-sm font-bold text-white dark:bg-white dark:text-black [&>*:nth-child(odd)]:duration-200 [&>*:nth-child(odd)]:hover:translate-x-1"
                     >
                       <Link href={item.livePreviewLink}>live preview</Link>
                       <span>

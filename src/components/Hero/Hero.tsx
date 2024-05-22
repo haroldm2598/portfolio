@@ -1,9 +1,12 @@
+import Link from "next/link";
 import { IoDocument, IoPaperPlane } from "react-icons/io5";
 import Button from "./Button";
 
 import { SparklesCore } from "../ui/AnimatedComponents/Sparkles";
 import AnimateParagraph from "../ui/Animated/AnimateParagraph";
 import AnimateSection from "../ui/Animated/AnimateSection";
+
+// import resumeDocs from "/public/files/resume-2024.pdf";
 
 export default function HeroTest() {
   return (
@@ -21,19 +24,29 @@ export default function HeroTest() {
         </div>
 
         <AnimateParagraph
-          className="text-grey100 dark:text-white100 w-full text-center text-[2.5rem] font-bold leading-10 lg:max-w-5xl lg:text-[4rem] lg:leading-[4.875rem]"
+          className="w-full text-center text-[2.5rem] font-bold leading-10 text-grey100 dark:text-white100 lg:max-w-5xl lg:text-[4rem] lg:leading-[4.875rem]"
           text="A front-end developer bringing your ideas into life."
           once={true}
         />
 
         <AnimateSection customDelay={2}>
           <div className="relative z-20 mt-5 flex flex-wrap justify-center gap-4">
-            <Button name="Download CV">
-              <IoDocument className="text-white" />
-            </Button>
-            <Button name="Hire Me">
-              <IoPaperPlane className="text-white" />
-            </Button>
+            <Link
+              href={"/files/resume-2024.pdf"}
+              download="Resume"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button name="Download CV">
+                <IoDocument className="text-white" />
+              </Button>
+            </Link>
+
+            <Link href="#contact">
+              <Button name="Hire Me">
+                <IoPaperPlane className="text-white" />
+              </Button>
+            </Link>
           </div>
         </AnimateSection>
       </div>

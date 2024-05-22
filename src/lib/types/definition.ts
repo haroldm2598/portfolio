@@ -33,6 +33,7 @@ export interface MediaLinksProps {
   Icon: IconType;
   socmedName: string;
   path: string;
+  name: string;
 }
 
 export interface ProjectProps {

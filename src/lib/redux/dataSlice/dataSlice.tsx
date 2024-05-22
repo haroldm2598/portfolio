@@ -48,9 +48,24 @@ const initialState: InitialState = {
     { imgSrc: require("/public/images/experties/mongodb.svg").default },
   ],
   socialMediaList: [
-    { Icon: SiGithub, socmedName: "Github", path: "@link" },
-    { Icon: SiLinkedin, socmedName: "Linkedin", path: "@link" },
-    { Icon: SiTwitter, socmedName: "Twitter", path: "@link" },
+    {
+      Icon: SiGithub,
+      socmedName: "Github",
+      path: "https://github.com/haroldm2598",
+      name: "@haroldm2598",
+    },
+    {
+      Icon: SiLinkedin,
+      socmedName: "Linkedin",
+      path: "https://www.linkedin.com/in/haroldmagisa/",
+      name: "@haroldmagisa",
+    },
+    {
+      Icon: SiTwitter,
+      socmedName: "Twitter",
+      path: "https://x.com/Mahayrolddd",
+      name: "@mayharolddd",
+    },
   ],
 };
 

@@ -33,19 +33,25 @@ const initialState: InitialState = {
     },
   ],
   expertiseList: [
-    { imgSrc: require("/public/images/experties/html.svg").default },
-    { imgSrc: require("/public/images/experties/css.svg").default },
-    { imgSrc: require("/public/images/experties/javascript.svg").default },
-    { imgSrc: require("/public/images/experties/sass.svg").default },
-    { imgSrc: require("/public/images/experties/tailwindcss.svg").default },
-    { imgSrc: require("/public/images/experties/reactjs.svg").default },
-    { imgSrc: require("/public/images/experties/nextjs.svg").default },
-    { imgSrc: require("/public/images/experties/github.svg").default },
-    { imgSrc: require("/public/images/experties/git.svg").default },
-    { imgSrc: require("/public/images/experties/typescript.svg").default },
-    { imgSrc: require("/public/images/experties/nodejs.svg").default },
-    { imgSrc: require("/public/images/experties/express.svg").default },
-    { imgSrc: require("/public/images/experties/mongodb.svg").default },
+    {
+      main: [
+        { imgSrc: require("/public/images/experties/html.svg").default },
+        { imgSrc: require("/public/images/experties/css.svg").default },
+        { imgSrc: require("/public/images/experties/javascript.svg").default },
+        { imgSrc: require("/public/images/experties/sass.svg").default },
+        { imgSrc: require("/public/images/experties/tailwindcss.svg").default },
+        { imgSrc: require("/public/images/experties/reactjs.svg").default },
+        { imgSrc: require("/public/images/experties/nextjs.svg").default },
+        { imgSrc: require("/public/images/experties/github.svg").default },
+        { imgSrc: require("/public/images/experties/git.svg").default },
+        { imgSrc: require("/public/images/experties/typescript.svg").default },
+      ],
+      sub: [
+        { imgSrc: require("/public/images/experties/nodejs.svg").default },
+        { imgSrc: require("/public/images/experties/express.svg").default },
+        { imgSrc: require("/public/images/experties/mongodb.svg").default },
+      ],
+    },
   ],
   socialMediaList: [
     {

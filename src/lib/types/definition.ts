@@ -11,8 +11,13 @@ export interface InitialState {
   isActive: boolean;
   navLinks: Array<NavLinksProps>;
   projectList: Array<ProjectProps>;
-  expertiseList: Array<{ imgSrc: string }>;
+  expertiseList: Array<ExpertiseProps>;
   socialMediaList: Array<MediaLinksProps>;
+}
+
+interface ExpertiseProps {
+  main: Array<{ imgSrc: string }>;
+  sub: Array<{ imgSrc: string }>;
 }
 
 interface NavLinksProps {

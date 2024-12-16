@@ -31,6 +31,12 @@ const initialState: InitialState = {
       githubLink: "https://github.com/haroldm2598/Project-ecommerce",
       livePreviewLink: "https://haroldm2598.github.io/Project-ecommerce/",
     },
+    {
+      imageSrc: require("/public/images/projects/elitegrounds.jpg").default,
+      title: "Elitegroundsran",
+      desc: "A classical game MMORPG it features a mix of fantasy and action gameplay with elements like quests, PvP battles, and dungeon raids.",
+      livePreviewLink: "https://elitegroundsran.com/",
+    },
   ],
   expertiseList: [
     {

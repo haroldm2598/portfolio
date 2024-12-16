@@ -45,7 +45,7 @@ export interface ProjectProps {
   imageSrc: StaticImageData;
   title: string;
   desc: string;
-  githubLink: string;
+  githubLink?: string;
   livePreviewLink: string;
 }
 

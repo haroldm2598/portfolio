@@ -46,14 +46,16 @@ export default function Card({ data }: ThreeDCardProps) {
                   </CardItem>
 
                   <div className="mt-10 flex items-center justify-between">
-                    <CardItem
-                      translateZ="30"
-                      as="button"
-                      className="flex items-center gap-2 rounded-xl border-2 border-blue100 bg-white px-4 py-2 text-sm font-bold text-black dark:bg-white dark:text-black  [&>*:nth-child(odd)]:duration-200 [&>*:nth-child(odd)]:hover:translate-x-1"
-                    >
-                      <Link href={item.githubLink}>source code</Link>
-                      <TbSourceCode size={16} />
-                    </CardItem>
+                    {item.githubLink && (
+                      <CardItem
+                        translateZ="30"
+                        as="button"
+                        className="flex items-center gap-2 rounded-xl border-2 border-blue100 bg-white px-4 py-2 text-sm font-bold text-black dark:bg-white dark:text-black  [&>*:nth-child(odd)]:duration-200 [&>*:nth-child(odd)]:hover:translate-x-1"
+                      >
+                        <Link href={item.githubLink}>source code</Link>
+                        <TbSourceCode size={16} />
+                      </CardItem>
+                    )}
                     <CardItem
                       translateZ="30"
                       as="button"

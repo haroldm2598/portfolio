@@ -40,7 +40,7 @@ export default function Card({ data }: ThreeDCardProps) {
                   <CardItem
                     as="p"
                     translateZ="60"
-                    className="mt-2 max-w-sm text-sm text-neutral-500 dark:text-neutral-300"
+                    className="mt-2 h-16 max-w-sm text-sm text-neutral-500 dark:text-neutral-300"
                   >
                     {item.desc}
                   </CardItem>

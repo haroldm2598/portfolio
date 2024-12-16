@@ -31,6 +31,14 @@ const initialState: InitialState = {
       githubLink: "https://github.com/haroldm2598/Project-ecommerce",
       livePreviewLink: "https://haroldm2598.github.io/Project-ecommerce/",
     },
+
+    {
+      imageSrc: require("/public/images/projects/podia.png").default,
+      title: "Podia(unofficial website)",
+      desc: "A frontendpractice.com where to showcase enhance their frontend skills by working on real-world project challenges.",
+      githubLink: "https://github.com/haroldm2598/podia",
+      livePreviewLink: "https://haroldm2598.github.io/podia/",
+    },
     {
       imageSrc: require("/public/images/projects/elitegrounds.jpg").default,
       title: "Elitegroundsran",

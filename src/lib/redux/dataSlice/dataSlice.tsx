@@ -40,7 +40,7 @@ const initialState: InitialState = {
       livePreviewLink: "https://haroldm2598.github.io/podia/",
     },
     {
-      imageSrc: require("/public/images/projects/elitegrounds.jpg").default,
+      imageSrc: require("/public/images/projects/elitegrounds.JPG").default,
       title: "Elitegroundsran",
       desc: "A classical game MMORPG it features a mix of fantasy and action gameplay with elements like quests, PvP battles, and dungeon raids.",
       livePreviewLink: "https://elitegroundsran.com/",

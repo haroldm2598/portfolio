@@ -70,7 +70,7 @@ export default function FormMailer() {
         transition={Bounce}
       /> */}
       <form
-        className="mx-auto mb-10 max-w-[40rem] [&>*]:mb-4"
+        className="mx-auto flex h-full max-w-[40rem] flex-col gap-8"
         onSubmit={handleSubmit(sendEmail)}
       >
         <input

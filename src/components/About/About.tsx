@@ -7,7 +7,6 @@ import TitleSection from "../TitleSection";
 
 export default function AboutTest() {
   const { expertiseList } = useAppSelector((state) => state.dataTemplate);
-  console.log(expertiseList);
 
   return (
     <section
@@ -33,7 +32,7 @@ export default function AboutTest() {
         </h1>
         <div className="my-10 flex flex-wrap justify-center gap-3 md:justify-start lg:gap-5">
           {expertiseList[0].main.map((item, index) => (
-            <AnimateStagger key={index} custom={index}>
+            <AnimateStagger key={index} custom={index} hoverTitle={item.title}>
               <div
                 key={index}
                 className="my-2 grid h-[100px] w-[100px] place-items-center rounded-lg border-2 border-[#E1E1E1] bg-white shadow-md"
@@ -41,8 +40,8 @@ export default function AboutTest() {
                 <div className="h-[40px] w-[40px] lg:h-[60px] lg:w-[60px]">
                   <Image
                     src={item.imgSrc}
+                    alt={item.title}
                     className="h-full w-full object-contain"
-                    alt="thumbnail"
                   />
                 </div>
               </div>
@@ -58,7 +57,7 @@ export default function AboutTest() {
 
         <div className="my-10 flex flex-wrap justify-center gap-3 md:justify-start lg:gap-5">
           {expertiseList[0].sub.map((item, index) => (
-            <AnimateStagger key={index} custom={index}>
+            <AnimateStagger key={index} custom={index} hoverTitle={item.title}>
               <div
                 key={index}
                 className="my-2 grid h-[100px] w-[100px] place-items-center rounded-lg border-2 border-[#E1E1E1] bg-white shadow-md"
@@ -66,8 +65,8 @@ export default function AboutTest() {
                 <div className=" h-[40px] w-[40px] lg:h-[60px] lg:w-[60px]">
                   <Image
                     src={item.imgSrc}
+                    alt={item.title}
                     className="h-full w-full object-contain"
-                    alt="thumbnail"
                   />
                 </div>
               </div>

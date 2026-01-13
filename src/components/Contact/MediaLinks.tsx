@@ -1,6 +1,6 @@
-import { MediaLinksProps } from "@/lib/types/definition";
-import AnimeStaggered from "../ui/Animated/AnimateStagger";
 import Link from "next/link";
+import AnimateMediaLinks from "../ui/Animated/AnimateMediaLinks";
+import { MediaLinksProps } from "@/lib/types/definition";
 
 interface MediaProps {
   data: Array<MediaLinksProps>;
@@ -12,7 +12,7 @@ export default function MediaLinks({ data }: MediaProps) {
       {data.map((socialItem, index) => {
         const { Icon, socmedName, path, name } = socialItem;
         return (
-          <AnimeStaggered key={index} custom={2 + index}>
+          <AnimateMediaLinks key={index} custom={2 + index}>
             <div className="flex items-center gap-2">
               <Icon size={40} className="dark:text-white" />
               <div>
@@ -22,7 +22,7 @@ export default function MediaLinks({ data }: MediaProps) {
                 </Link>
               </div>
             </div>
-          </AnimeStaggered>
+          </AnimateMediaLinks>
         );
       })}
     </>

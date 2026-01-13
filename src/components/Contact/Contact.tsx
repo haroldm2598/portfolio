@@ -7,6 +7,7 @@ import SubTitle from "../SubTitle";
 import Form from "./Form";
 import MediaLinks from "./MediaLinks";
 import { Bounce, ToastContainer } from "react-toastify";
+import AnimateSectionBackground from "../ui/Animated/AnimateSectionBackground";
 
 export default function Contact() {
   const { socialMediaList } = useAppSelector((state) => state.dataTemplate);
@@ -41,12 +42,10 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className="lg:bg-blackBlur rounded-lg bg-none lg:px-4 lg:py-10">
-          <AnimateSection customDelay={2}>
-            <SubTitle title="Get in touch" />
-            <Form />
-          </AnimateSection>
-        </div>
+        <AnimateSectionBackground customDelay={2}>
+          <SubTitle title="Get in touch" />
+          <Form />
+        </AnimateSectionBackground>
       </div>
     </section>
   );

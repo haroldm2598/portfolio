@@ -39,27 +39,12 @@ const mobileLinkVars = {
   }),
 };
 
-export const titleVariants = {
-  hidden: {
-    opacity: 0,
-    y: 10,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.3,
-      ease: "easeOut",
-    },
-  },
-};
-
 interface AnimateProps {
   children: React.ReactNode;
   custom: number;
 }
 
-export default function AnimeStaggered({ children, custom }: AnimateProps) {
+export default function AnimateMediaLinks({ children, custom }: AnimateProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const inViewControl = useAnimation();

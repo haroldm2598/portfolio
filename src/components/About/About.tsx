@@ -7,7 +7,6 @@ import TitleSection from "../TitleSection";
 
 export default function AboutTest() {
   const { expertiseList } = useAppSelector((state) => state.dataTemplate);
-  console.log(expertiseList);
 
   return (
     <section

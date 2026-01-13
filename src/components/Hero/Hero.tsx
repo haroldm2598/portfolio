@@ -32,7 +32,7 @@ export default function HeroTest() {
         <AnimateSection customDelay={2}>
           <div className="relative z-20 mt-5 flex flex-wrap justify-center gap-4">
             <Link
-              href={"/files/resume-2024.pdf"}
+              href={"/files/resume.pdf"}
               download="Resume"
               target="_blank"
               rel="noopener noreferrer"

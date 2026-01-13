@@ -39,19 +39,45 @@ const mobileLinkVars = {
   }),
 };
 
+/* ===================== HOVER VARIANTS ===================== */
+
+const cardHoverVariants = {
+  hidden: { scale: 1 },
+  visible: {
+    scale: 1.05,
+    transition: { duration: 0.25, ease: "easeOut" },
+  },
+};
+
+const titleVariants = {
+  hidden: { opacity: 0, y: 5 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.1, ease: "easeOut" },
+  },
+};
+
+/* ===================== PROPS ===================== */
+
 interface AnimateProps {
   children: React.ReactNode;
   custom: number;
+  hoverTitle?: string; // ✅ NEW
 }
 
-export default function AnimeStaggered({ children, custom }: AnimateProps) {
+export default function AnimateStagger({
+  children,
+  custom,
+  hoverTitle,
+}: AnimateProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const inViewControl = useAnimation();
 
   useEffect(() => {
     if (isInView) inViewControl.start("open");
-  }, [isInView]);
+  }, [isInView, inViewControl]);
 
   return (
     <div ref={ref}>
@@ -63,13 +89,32 @@ export default function AnimeStaggered({ children, custom }: AnimateProps) {
           exit="initial"
         >
           <div className="overflow-hidden">
+            {/* 🔥 CARD HOVER HANDLED HERE */}
             <motion.div
-              variants={mobileLinkVars}
-              initial="initial"
-              animate={inViewControl}
-              custom={custom}
+              className="relative"
+              variants={cardHoverVariants}
+              initial="hidden"
+              whileHover="visible"
             >
-              {children}
+              {/* EXISTING STAGGER LOGIC */}
+              <motion.div
+                variants={mobileLinkVars}
+                initial="initial"
+                animate={inViewControl}
+                custom={custom}
+              >
+                {children}
+              </motion.div>
+
+              {/* 🔥 TITLE OVERLAY (OPTIONAL) */}
+              {hoverTitle && (
+                <motion.div
+                  variants={titleVariants}
+                  className="pointer-events-none absolute inset-0 m-[0.05rem] flex items-center justify-center rounded-lg bg-black/40 px-2 text-center text-sm font-medium text-white"
+                >
+                  {hoverTitle}
+                </motion.div>
+              )}
             </motion.div>
           </div>
         </motion.div>

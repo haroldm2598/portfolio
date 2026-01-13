@@ -49,24 +49,95 @@ const initialState: InitialState = {
   expertiseList: [
     {
       main: [
-        { imgSrc: require("/public/images/experties/html.svg").default },
-        { imgSrc: require("/public/images/experties/css.svg").default },
-        { imgSrc: require("/public/images/experties/sass.svg").default },
-        { imgSrc: require("/public/images/experties/tailwindcss.svg").default },
-        { imgSrc: require("/public/images/experties/javascript.svg").default },
-        { imgSrc: require("/public/images/experties/typescript.svg").default },
-        { imgSrc: require("/public/images/experties/reactjs.svg").default },
-        { imgSrc: require("/public/images/experties/nextjs.svg").default },
-        { imgSrc: require("/public/images/experties/zustand.svg").default },
-        { imgSrc: require("/public/images/experties/supabase.svg").default },
-        { imgSrc: require("/public/images/experties/prisma.svg").default },
-        { imgSrc: require("/public/images/experties/github.svg").default },
-        { imgSrc: require("/public/images/experties/git.svg").default },
+        {
+          imgSrc: require("/public/images/experties/html.svg"),
+          title: "HTML5",
+        },
+        { imgSrc: require("/public/images/experties/css.svg"), title: "CSS3" },
+        { imgSrc: require("/public/images/experties/sass.svg"), title: "SASS" },
+        {
+          imgSrc: require("/public/images/experties/tailwindcss.svg"),
+          title: "Tailwindcss",
+        },
+        {
+          imgSrc: require("/public/images/experties/javascript.svg"),
+          title: "Javascript",
+        },
+        {
+          imgSrc: require("/public/images/experties/typescript.svg"),
+          title: "Typescript",
+        },
+        {
+          imgSrc: require("/public/images/experties/reactjs.svg"),
+          title: "React",
+        },
+        {
+          imgSrc: require("/public/images/experties/react-native.svg"),
+          title: "React Native",
+        },
+        {
+          imgSrc: require("/public/images/experties/nextjs.svg"),
+          title: "Next",
+        },
+        {
+          imgSrc: require("/public/images/experties/shadcn-ui.svg"),
+          title: "Shadcn/ui",
+        },
+        {
+          imgSrc: require("/public/images/experties/redux.svg"),
+          title: "React Redux",
+        },
+        {
+          imgSrc: require("/public/images/experties/zustand.svg"),
+          title: "Zustand",
+        },
+        {
+          imgSrc: require("/public/images/experties/tanstack.svg"),
+          title: "Tanstack Query",
+        },
+        {
+          imgSrc: require("/public/images/experties/supabase.svg"),
+          title: "Supabase",
+        },
+        {
+          imgSrc: require("/public/images/experties/prisma.svg"),
+          title: "Prisma ORM",
+        },
+        {
+          imgSrc: require("/public/images/experties/postgresql.svg"),
+          title: "PostreSQL",
+        },
+        {
+          imgSrc: require("/public/images/experties/framer-motion.svg"),
+          title: "Motion",
+        },
+        {
+          imgSrc: require("/public/images/experties/github.svg"),
+          title: "Github",
+        },
+        { imgSrc: require("/public/images/experties/git.svg"), title: "Git" },
+        {
+          imgSrc: require("/public/images/experties/figma.svg"),
+          title: "Figma",
+        },
+        {
+          imgSrc: require("/public/images/experties/balsamiq.svg"),
+          title: "Balsamiq",
+        },
       ],
       sub: [
-        { imgSrc: require("/public/images/experties/nodejs.svg").default },
-        { imgSrc: require("/public/images/experties/express.svg").default },
-        { imgSrc: require("/public/images/experties/mongodb.svg").default },
+        {
+          imgSrc: require("/public/images/experties/nodejs.svg"),
+          title: "Node",
+        },
+        {
+          imgSrc: require("/public/images/experties/express.svg"),
+          title: "Express",
+        },
+        {
+          imgSrc: require("/public/images/experties/mongodb.svg"),
+          title: "MongoDB",
+        },
       ],
     },
   ],

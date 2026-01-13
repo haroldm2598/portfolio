@@ -16,8 +16,8 @@ export interface InitialState {
 }
 
 interface ExpertiseProps {
-  main: Array<{ imgSrc: string }>;
-  sub: Array<{ imgSrc: string }>;
+  main: Array<{ imgSrc: string; title: string }>;
+  sub: Array<{ imgSrc: string; title: string }>;
 }
 
 interface NavLinksProps {
